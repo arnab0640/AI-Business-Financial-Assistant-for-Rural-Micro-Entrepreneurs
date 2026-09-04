@@ -6,7 +6,7 @@
  * 
  * Team: Code Catalyst
  * Team Leader: Arnab Gayen | Co-Leader: Ujjawal Dubey
- * Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit
+ * Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit Buccha
  * Ministry of Social Justice and Empowerment (MoSJE)
  */
 
@@ -19,7 +19,7 @@ const APP_DATA = {
     team: "Code Catalyst",
     leader: "Arnab Gayen",
     coLeader: "Ujjawal Dubey",
-    members: ["Arnab Gayen", "Ujjawal Dubey", "Sanjana Kumari Balmiki", "Sreeja Maity", "Yash Raj", "Vinit"]
+    members: ["Arnab Gayen", "Ujjawal Dubey", "Sanjana Kumari Balmiki", "Sreeja Maity", "Yash Raj", "Vinit Buccha"]
   },
 
   // Multi-lingual dictionary
@@ -335,7 +335,7 @@ const APP_DATA = {
       roleType: "member"
     },
     {
-      name: "Vinit",
+      name: "Vinit Buccha",
       role: "Quality Assurance & Market Analyst",
       avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-indigo-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
       bio: "Conducts hyper-local sector demand validation, market buyer linkage verification, and system end-to-end testing.",

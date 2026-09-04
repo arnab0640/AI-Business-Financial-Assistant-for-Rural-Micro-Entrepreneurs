@@ -3,7 +3,7 @@
  * Smart India Hackathon 2026 Presentation Edition
  * Team: Code Catalyst
  * Team Leader: Arnab Gayen | Co-Leader: Ujjawal Dubey
- * Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit
+ * Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit Buccha
  */
 
 let currentLang = 'en';

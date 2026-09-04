@@ -23,7 +23,7 @@
 3. **Sanjana Kumari Balmiki** – *Data & Social Inclusion Specialist*
 4. **Sreeja Maity** – *UI/UX & Frontend Designer*
 5. **Yash Raj** – *Backend & Scheme Logic Engineer*
-6. **Vinit** – *Quality Assurance & Market Data Analyst*
+6. **Vinit Buccha** – *Quality Assurance & Market Data Analyst*
 
 ---
 
