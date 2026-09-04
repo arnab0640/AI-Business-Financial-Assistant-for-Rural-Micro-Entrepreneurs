@@ -65,6 +65,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
 }
 
 body {
@@ -73,6 +75,10 @@ body {
   color: var(--slate-800);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: env(safe-area-inset-bottom);
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
@@ -772,8 +778,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Responsive Breakpoints */
+/* Responsive & Native Mobile (iOS & Android) Optimization Suite */
 @media (max-width: 992px) {
+  .sih-intro-banner > div {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
   .sih-title {
     font-size: 2.2rem;
   }
@@ -782,11 +792,83 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 600px) {
-  .sih-title {
-    font-size: 1.8rem;
+@media (max-width: 768px) {
+  /* iOS & Android Input Zoom Prevention */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  
+  /* Touch target optimization (Minimum 44px height) */
+  .btn-primary, .btn-secondary, .icon-btn, .roster-chip, .select-lang {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Mobile Navbar with Touch Swipe Navigation */
+  .navbar {
+    padding: 8px 12px;
+  }
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 8px;
   }
   .nav-links {
-    display: none;
+    display: flex !important;
+    overflow-x: auto;
+    width: 100%;
+    padding: 8px 0;
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  .nav-links::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  .nav-link {
+    white-space: nowrap;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    background: rgba(0,0,0,0.04);
+    border-radius: var(--radius-full);
+  }
+  
+  .hide-mobile {
+    display: none !important;
+  }
+  
+  .team-roster-bar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  .sih-title {
+    font-size: 1.75rem;
+  }
+  .section-container {
+    padding: 0 14px;
+  }
+  .glass-card {
+    padding: 16px;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PWA Standalone Mobile Mode Enhancements (iOS & Android Native Window) */
+@media (display-mode: standalone) {
+  .gov-topbar {
+    padding-top: max(10px, env(safe-area-inset-top));
+  }
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 }
