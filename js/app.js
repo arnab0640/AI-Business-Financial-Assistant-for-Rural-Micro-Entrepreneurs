@@ -1,7 +1,9 @@
 /**
  * GrameenVikas AI - MoSJE Micro-Entrepreneur Advisory Platform
  * Interactive Logic File
- * Team: Code Catalyst | Leads: Arnab Gayen & Ujjawal Dubey
+ * Team: Code Catalyst
+ * Co-Leads: Arnab Gayen & Ujjawal Dubey
+ * Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit
  */
 
 let currentLang = 'en';
@@ -492,7 +494,7 @@ function printBankableDPR() {
 }
 
 /* ==========================================================================
-   7. Hyper-Local Market Linkage & Team Logic
+   7. Hyper-Local Market Linkage & Team Rendering Logic
    ========================================================================== */
 function renderProducts() {
   const container = document.getElementById('productsContainer');
@@ -504,7 +506,7 @@ function renderProducts() {
     card.style.padding = '20px';
     card.style.display = 'flex';
     card.style.flexDirection = 'column';
-    card.style.justifyContent = 'space-between';
+    card.style.justifySpaceBetween = 'space-between';
 
     card.innerHTML = `
       <div>
@@ -552,17 +554,23 @@ function renderTeam() {
   APP_DATA.teamMembers.forEach(member => {
     const card = document.createElement('div');
     card.className = 'glass-card team-card';
+
+    const pillStyle = member.isLead ? '' : 'background: linear-gradient(135deg, #0284c7, #0ea5e9);';
+    const badgeStyle = member.isLead 
+      ? 'background: rgba(16, 185, 129, 0.15); color: var(--emerald-600); border-color: rgba(16, 185, 129, 0.4);' 
+      : 'background: rgba(14, 165, 233, 0.15); color: #0284c7; border-color: rgba(14, 165, 233, 0.4);';
+
     card.innerHTML = `
-      <div class="team-avatar">
+      <div class="team-avatar" style="${member.isLead ? 'border-color: var(--primary-600);' : 'border-color: #0284c7;'}">
         ${member.avatarSvg}
       </div>
-      <span class="team-role-pill">${member.role}</span>
-      <h3 style="font-size: 1.3rem; margin-bottom: 6px; color: var(--slate-900);">${member.name}</h3>
-      <p style="font-size: 0.9rem; color: var(--slate-600); margin-bottom: 16px;">
+      <span class="team-role-pill" style="${pillStyle}">${member.role}</span>
+      <h3 style="font-size: 1.25rem; margin-bottom: 6px; color: var(--slate-900);">${member.name}</h3>
+      <p style="font-size: 0.88rem; color: var(--slate-600); margin-bottom: 16px;">
         ${member.bio}
       </p>
-      <span class="team-badge" style="background: rgba(16, 185, 129, 0.15); color: var(--emerald-600); border-color: rgba(16, 185, 129, 0.4);">
-        <i class="fa-solid fa-star"></i> ${member.tag}
+      <span class="team-badge" style="${badgeStyle}">
+        <i class="fa-solid ${member.isLead ? 'fa-star' : 'fa-user-check'}"></i> ${member.tag}
       </span>
     `;
     container.appendChild(card);

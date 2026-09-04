@@ -24,7 +24,21 @@
 4. 💰 **Financial Structuring Engine:** Live cash flow simulator, 12-month net profit forecasting, break-even analysis, and subvented EMI calculators.
 5. 📄 **1-Click Bankable Project Report (DPR) Generator:** Generates official print-ready Detailed Project Reports formatted specifically for District Industry Centers (DIC), Banks, and NABARD.
 6. 🛍️ **Hyper-Local Market Linkage:** Direct producer-to-buyer network linking rural artisans with GeM (Government e-Marketplace) and ONDC e-commerce channels.
-7. 👥 **Team & Leadership Showcase:** Dedicated section highlighting Team Code Catalyst structure and co-leads.
+7. 👥 **Team & Leadership Showcase:** Dedicated section highlighting Team Code Catalyst structure and all 6 team members.
+
+---
+
+## 👨‍💻 Team Code Catalyst (6 Members)
+
+### 🌟 Co-Leads
+- **Arnab Gayen** – Team Lead & Full Stack Architect
+- **Ujjawal Dubey** – Team Lead & AI Financial Engineer
+
+### 👥 Team Members
+- **Sanjana Kumari Balmiki** – Data & Social Inclusion Specialist
+- **Sreeja Maity** – UI/UX & Frontend Designer
+- **Yash Raj** – Backend & Scheme Logic Engineer
+- **Vinit** – Quality Assurance & Market Data Analyst
 
 ---
 
@@ -52,11 +66,3 @@
 
 3. **Open in Browser:**
    Go to `http://localhost:8000`
-
----
-
-## 👨‍💻 Team Credits
-
-- **Team Name:** Code Catalyst
-- **Team Leads:** Arnab Gayen & Ujjawal Dubey
-- **Organization:** Ministry of Social Justice and Empowerment (MoSJE)

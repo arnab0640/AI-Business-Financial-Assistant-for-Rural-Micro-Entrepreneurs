@@ -3,7 +3,9 @@
  * Data store for MoSJE Schemes, Indian Geographic Data, Sector Demand Matrices,
  * Multi-lingual Translations, and AI Advisory Knowledge Base.
  * 
- * Team: Code Catalyst | Leads: Arnab Gayen & Ujjawal Dubey
+ * Team: Code Catalyst
+ * Co-Leads: Arnab Gayen & Ujjawal Dubey
+ * Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit
  * Ministry of Social Justice and Empowerment (MoSJE)
  */
 
@@ -13,7 +15,8 @@ const APP_DATA = {
     problemStatement: "AI-Driven Hyper-Local Business Advisory and Financial Structuring Assistant",
     organization: "Ministry of Social Justice and Empowerment (MoSJE)",
     team: "Code Catalyst",
-    leads: ["Arnab Gayen", "Ujjawal Dubey"]
+    leads: ["Arnab Gayen", "Ujjawal Dubey"],
+    members: ["Arnab Gayen", "Ujjawal Dubey", "Sanjana Kumari Balmiki", "Sreeja Maity", "Yash Raj", "Vinit"]
   },
 
   // Multi-lingual dictionary
@@ -50,7 +53,7 @@ const APP_DATA = {
       dprHeader: "5. 1-Click Bankable Detailed Project Report (DPR)",
       dprSubtitle: "Official format recognized by Banks, NABARD, and District Industry Centers (DIC)",
       linkageHeader: "6. Hyper-Local Market Linkage & Buyer Connect",
-      teamHeader: "7. Team Code Catalyst Leadership",
+      teamHeader: "7. Team Code Catalyst Members",
       impactHeader: "Project Vision & Impact",
       audioReadout: "Audio Readout",
       speakingNow: "Reading content out loud...",
@@ -88,7 +91,7 @@ const APP_DATA = {
       dprHeader: "5. 1-क्लिक बैंक योग्य विस्तृत परियोजना रिपोर्ट (DPR)",
       dprSubtitle: "बैंकों, नाबार्ड और जिला उद्योग केंद्रों द्वारा मान्यता प्राप्त आधिकारिक प्रारूप",
       linkageHeader: "6. अति-स्थानीय बाजार जुड़ाव और खरीदार नेटवर्क",
-      teamHeader: "7. टीम कोड कैटलिस्ट नेतृत्व",
+      teamHeader: "7. टीम कोड कैटलिस्ट सदस्य",
       impactHeader: "परियोजना प्रभाव",
       audioReadout: "ऑडियो वाचन",
       speakingNow: "सामग्री पढ़ी जा रही है...",
@@ -126,7 +129,7 @@ const APP_DATA = {
       dprHeader: "৫. ১-ক্লিকে ব্যাংকযোগ্য বিস্তারিত প্রকল্প রিপোর্ট (DPR)",
       dprSubtitle: "ব্যাংক, নাবার্ড এবং জেলা শিল্প কেন্দ্র দ্বারা স্বীকৃত ফর্ম্যাট",
       linkageHeader: "৬. স্থানীয় বাজার সংযোগ ও ক্রেতা নেটওয়ার্ক",
-      teamHeader: "৭. টিম কোড ক্যাটালিস্ট নেতৃত্ব",
+      teamHeader: "৭. টিম কোড ক্যাটালিস্ট সদস্যগণ",
       impactHeader: "প্রভাব ও ফলাফল",
       audioReadout: "অডিও পাঠ",
       speakingNow: "লেখা পাঠ করা হচ্ছে...",
@@ -164,7 +167,7 @@ const APP_DATA = {
       dprHeader: "5. 1-கிளிக் வங்கி திட்ட அறிக்கை (DPR)",
       dprSubtitle: "வங்கிகள் அங்கீகரித்த அதிகாரப்பூர்வ வடிவம்",
       linkageHeader: "6. சந்தை இணைப்பு மற்றும் வாங்குபவர் நெட்வொர்க்",
-      teamHeader: "7. கோட் கேட்டலிஸ்ட் தலைமைத்துவக் குழு",
+      teamHeader: "7. கோட் கேட்டலிஸ்ட் குழு உறுப்பினர்கள்",
       impactHeader: "தாக்கம்",
       audioReadout: "ஆடியோ வாசிப்பு",
       speakingNow: "வாசிக்கப்படுகிறது...",
@@ -202,7 +205,7 @@ const APP_DATA = {
       dprHeader: "5. 1-क्लिक बँकयोग्य DPR अहवाल",
       dprSubtitle: "बँका मान्यताप्राप्त फॉरमॅट",
       linkageHeader: "6. बाजार जोडणी आणि ग्राहक नेटवर्क",
-      teamHeader: "7. कोड कॅटॅलिस्ट नेतृत्व",
+      teamHeader: "7. कोड कॅटॅलिस्ट सदस्य",
       impactHeader: "प्रभाव",
       audioReadout: "ऑडिओ वाचन",
       speakingNow: "वाचत आहे...",
@@ -240,7 +243,7 @@ const APP_DATA = {
       dprHeader: "5. 1-ક્લિક બેંક યોગ્ય DPR રિપોર્ટ",
       dprSubtitle: "બેંકો અને નાબાર્ડ દ્વારા માન્ય અધિકૃત ફોર્મેટ",
       linkageHeader: "6. સ્થાનિક બજાર જોડાણ અને ગ્રાહક નેટવર્ક",
-      teamHeader: "7. કોડ કૅટેલિસ્ટ નેતૃત્વ",
+      teamHeader: "7. કોડ કૅટેલિસ્ટ ટીમ સભ્યો",
       impactHeader: "પ્રભાવ",
       audioReadout: "ઑડિઓ વાચન",
       speakingNow: "વાંચી રહ્યા છીએ...",
@@ -278,7 +281,7 @@ const APP_DATA = {
       dprHeader: "5. 1-క్లిక్ బ్యాంక్ ప్రాజెక్ట్ నివేదిక (DPR)",
       dprSubtitle: "బ్యాంకులు ఆమోదించిన అధికారిక ఫార్మాట్",
       linkageHeader: "6. స్థానిక మార్కెట్ మరియు కొనుగోలుదారుల నెట్‌వర్క్",
-      teamHeader: "7. కోడ్ క్యాటలిస్ట్ నాయకత్వం",
+      teamHeader: "7. కోడ్ క్యాటలిస్ట్ సభ్యులు",
       impactHeader: "ప్రభావం",
       audioReadout: "ఆడియో చదవడం",
       speakingNow: "చదువుతోంది...",
@@ -286,21 +289,55 @@ const APP_DATA = {
     }
   },
 
-  // Team Members Data
+  // All 6 Team Members Data
   teamMembers: [
     {
       name: "Arnab Gayen",
       role: "Team Lead & Full Stack Architect",
       avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-emerald-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
       bio: "Leads product architecture, AI advisory logic integration, and financial projection engineering for rural micro-entrepreneurship.",
-      tag: "Co-Lead"
+      tag: "Co-Lead",
+      isLead: true
     },
     {
       name: "Ujjawal Dubey",
       role: "Team Lead & AI Financial Engineer",
       avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-amber-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
       bio: "Leads MoSJE scheme rule engines, credit risk subvention algorithms, and hyper-local market intelligence mapping.",
-      tag: "Co-Lead"
+      tag: "Co-Lead",
+      isLead: true
+    },
+    {
+      name: "Sanjana Kumari Balmiki",
+      role: "Data & Social Inclusion Specialist",
+      avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-purple-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
+      bio: "Specializes in MoSJE demographic targeting (SC/OBC/Safai Karamchari), field data research, and social impact metrics.",
+      tag: "Team Member",
+      isLead: false
+    },
+    {
+      name: "Sreeja Maity",
+      role: "UI/UX & Frontend Designer",
+      avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-blue-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
+      bio: "Designs accessible multi-lingual interfaces, glassmorphism layouts, and voice/audio readout user experience for rural users.",
+      tag: "Team Member",
+      isLead: false
+    },
+    {
+      name: "Yash Raj",
+      role: "Backend & Scheme Logic Engineer",
+      avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-teal-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
+      bio: "Engineers scheme eligibility matching logic, loan interest subvention calculators, and Detailed Project Report (DPR) data pipelines.",
+      tag: "Team Member",
+      isLead: false
+    },
+    {
+      name: "Vinit",
+      role: "Quality Assurance & Market Analyst",
+      avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-indigo-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
+      bio: "Conducts hyper-local sector demand validation, market buyer linkage verification, and system end-to-end testing.",
+      tag: "Team Member",
+      isLead: false
     }
   ],
 
