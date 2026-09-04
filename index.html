@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GrameenVikas AI - MoSJE Micro-Entrepreneur Advisory Platform | Team Code Catalyst</title>
-  <meta name="description" content="AI-Driven Hyper-Local Business Advisory and Financial Structuring Assistant for Rural Micro-Entrepreneurs by Team Code Catalyst (Co-Leads: Arnab Gayen & Ujjawal Dubey; Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit) for MoSJE.">
+  <title>GrameenVikas AI - Smart India Hackathon 2026 | Team Code Catalyst (MoSJE)</title>
+  <meta name="description" content="AI-Driven Hyper-Local Business Advisory and Financial Structuring Assistant for Rural Micro-Entrepreneurs built for Smart India Hackathon 2026 (SIH 2026) for MoSJE by Team Code Catalyst (Co-Leads: Arnab Gayen & Ujjawal Dubey; Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit).">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,31 +17,76 @@
 </head>
 <body>
 
-  <!-- Top MoSJE & Team Code Catalyst Banner -->
+  <!-- Top MoSJE & SIH 2026 Header Bar -->
   <div class="gov-topbar">
     <div class="gov-topbar-content">
       <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-        <span style="font-weight: 700; color: var(--accent-gold);"><i class="fa-solid fa-building-columns"></i> Ministry of Social Justice and Empowerment (MoSJE)</span>
+        <span style="font-weight: 700; color: var(--accent-gold);"><i class="fa-solid fa-trophy"></i> Smart India Hackathon 2026 (SIH 2026)</span>
         <span style="opacity: 0.6;">|</span>
-        <span>AI-Driven Hyper-Local Business Advisory & Financial Assistant</span>
+        <span><i class="fa-solid fa-building-columns"></i> Ministry of Social Justice and Empowerment (MoSJE)</span>
       </div>
       <div style="display: flex; align-items: center; gap: 12px;">
-        <span class="team-badge"><i class="fa-solid fa-code"></i> Team: Code Catalyst (6 Members)</span>
+        <span class="team-badge"><i class="fa-solid fa-users"></i> Team: Code Catalyst (6 Members)</span>
         <span class="team-badge" style="background: rgba(16, 185, 129, 0.2); border-color: #10b981; color: #34d399;" id="topLeadsBadge">
-          <i class="fa-solid fa-user-gear"></i> Leads: Arnab Gayen & Ujjawal Dubey
+          <i class="fa-solid fa-user-gear"></i> Co-Leads: Arnab Gayen & Ujjawal Dubey
         </span>
       </div>
     </div>
   </div>
 
-  <!-- Navigation Bar -->
+  <!-- GRAND INTRODUCTORY SCREEN FOR SMART INDIA HACKATHON 2026 -->
+  <header class="sih-intro-banner">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div class="sih-badge-pill">
+        <i class="fa-solid fa-award"></i> Smart India Hackathon 2026 Official Entry
+      </div>
+
+      <h1 class="sih-title">
+        AI-Driven Hyper-Local Business Advisory & Financial Structuring Assistant
+      </h1>
+
+      <p style="font-size: 1.25rem; color: #e0f2f1; max-width: 860px; margin-bottom: 28px; line-height: 1.6;">
+        Empowering rural micro-entrepreneurs, artisans, and women Self-Help Groups (SHGs) across India with voice AI advisory in 7 regional languages, MoSJE interest subvention scheme matching, cash flow projections, and 1-click bankable project reports.
+      </p>
+
+      <!-- 6-Member Team Quick Bar -->
+      <div style="margin-bottom: 32px;">
+        <div style="font-size: 0.88rem; font-weight: 700; color: #fef08a; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px;">
+          <i class="fa-solid fa-user-group"></i> Team Code Catalyst Roster:
+        </div>
+        <div class="team-roster-bar">
+          <span class="roster-chip lead"><i class="fa-solid fa-crown"></i> Arnab Gayen (Co-Lead)</span>
+          <span class="roster-chip lead"><i class="fa-solid fa-crown"></i> Ujjawal Dubey (Co-Lead)</span>
+          <span class="roster-chip"><i class="fa-solid fa-user"></i> Sanjana Kumari Balmiki</span>
+          <span class="roster-chip"><i class="fa-solid fa-user"></i> Sreeja Maity</span>
+          <span class="roster-chip"><i class="fa-solid fa-user"></i> Yash Raj</span>
+          <span class="roster-chip"><i class="fa-solid fa-user"></i> Vinit</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+        <a href="#copilot" class="btn-primary" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 14px 28px; font-size: 1rem;">
+          <i class="fa-solid fa-rocket"></i> Launch AI Advisory Platform
+        </a>
+        <a href="#sihBrief" class="btn-secondary" style="border-color: white; color: white; padding: 14px 24px; font-size: 1rem;">
+          <i class="fa-solid fa-file-lines"></i> View SIH 2026 Executive Brief
+        </a>
+        <a href="#team" class="btn-secondary" style="border-color: rgba(255,255,255,0.4); color: #fef08a; padding: 14px 24px; font-size: 1rem;">
+          <i class="fa-solid fa-users-gear"></i> View Team Roster
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Navigation Bar -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="brand-logo">
         <div class="logo-icon"><i class="fa-solid fa-wheat-awn-circle-exclamation"></i></div>
         <div>
           <h2 style="font-size: 1.35rem; line-height: 1;" id="navTitle">GrameenVikas AI</h2>
-          <p style="font-size: 0.72rem; color: var(--slate-600); font-weight: 600;" id="navSubtitle">MoSJE Rural Advisory Platform</p>
+          <p style="font-size: 0.72rem; color: var(--slate-600); font-weight: 600;" id="navSubtitle">MoSJE • SIH 2026 Entry</p>
         </div>
       </a>
 
@@ -79,76 +124,58 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero-section">
-    <div>
-      <div class="hero-badge">
-        <i class="fa-solid fa-wand-magic-sparkles"></i> MoSJE AI Innovation Platform
-      </div>
-      <h1 class="hero-title">
-        <span class="gradient-text" id="heroTitle">AI Business & Financial Assistant for Rural Micro-Entrepreneurs</span>
-      </h1>
-      <p class="hero-subtitle" id="heroSubtitle">
-        Get hyper-local business advice, match with MoSJE schemes (VISVAS, NSFDC, NBCFDC), project 12-month cash flows, and generate bankable project reports in 7 regional languages.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#copilot" class="btn-primary" id="btnStartCopilot">
-          <i class="fa-solid fa-microphone-lines"></i> Talk to AI Copilot
-        </a>
-        <a href="#schemes" class="btn-secondary" id="btnCalculateLoan">
-          <i class="fa-solid fa-building-columns"></i> Match Financial Schemes
-        </a>
-        <a href="#financials" class="btn-secondary" style="border-color: var(--accent-gold); color: var(--accent-gold-hover);" id="btnDpr">
-          <i class="fa-solid fa-file-pdf"></i> Generate Bankable DPR
-        </a>
-      </div>
-    </div>
-
-    <!-- Hero Illustration Card -->
-    <div class="glass-card" style="padding: 24px; position: relative; overflow: hidden;">
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-        <span style="font-weight: 700; font-size: 0.9rem; color: var(--primary-700);">
-          <i class="fa-solid fa-circle-dot text-emerald-500"></i> Hyper-Local Live Analytics
-        </span>
-        <span style="font-size: 0.75rem; background: var(--primary-50); padding: 4px 8px; border-radius: 4px; font-weight: 700; color: var(--primary-700);">
-          MoSJE Verified
-        </span>
-      </div>
-
-      <div style="background: var(--slate-100); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 16px;">
-        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 8px;">
-          <span>Target Sector: Clay Terracotta</span>
-          <span style="color: var(--emerald-600);">High Demand (88/100)</span>
-        </div>
-        <div style="height: 8px; background: #cbd5e1; border-radius: 4px; overflow: hidden;">
-          <div style="width: 88%; height: 100%; background: linear-gradient(90deg, #00897b, #10b981);"></div>
-        </div>
-      </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-        <div style="background: var(--slate-50); padding: 12px; border-radius: 8px; text-align: center; border: 1px solid var(--slate-100);">
-          <div style="font-size: 0.75rem; color: var(--slate-600); font-weight: 600;">Recommended Loan</div>
-          <div style="font-size: 1.2rem; font-weight: 800; color: var(--primary-700);">₹1,40,000</div>
-          <div style="font-size: 0.7rem; color: var(--emerald-600); font-weight: 700;">VISVAS 5% Interest Rebate</div>
-        </div>
-        <div style="background: var(--slate-50); padding: 12px; border-radius: 8px; text-align: center; border: 1px solid var(--slate-100);">
-          <div style="font-size: 0.75rem; color: var(--slate-600); font-weight: 600;">Est. Monthly Net Income</div>
-          <div style="font-size: 1.2rem; font-weight: 800; color: var(--accent-gold-hover);">₹24,500</div>
-          <div style="font-size: 0.7rem; color: var(--slate-600); font-weight: 700;">Break-even: Month 3</div>
-        </div>
-      </div>
-    </div>
-  </header>
-
   <!-- Audio Readout Notification Banner (Shown when TTS active) -->
   <div id="ttsBanner" class="no-print" style="display: none; background: #0284c7; color: white; padding: 10px 24px; text-align: center; font-weight: 700; font-size: 0.9rem;">
     <i class="fa-solid fa-volume-high fa-bounce"></i> <span id="ttsBannerText">Reading page content out loud for rural accessibility...</span>
     <button onclick="stopAudioReadout()" style="margin-left: 16px; background: rgba(255,255,255,0.2); border: none; color: white; padding: 4px 12px; border-radius: 4px; cursor: pointer; font-weight: 700;">Stop Audio</button>
   </div>
 
-  <!-- Main Content Container with Distinct Topic Wrappers -->
+  <!-- Main Content Container with SIH Brief & 7 Distinct Topic Wrappers -->
   <main class="section-container">
+
+    <!-- SIH 2026 Executive Problem Brief Section -->
+    <section id="sihBrief" class="glass-card" style="padding: 32px; margin-bottom: 48px; border-left: 6px solid var(--accent-gold);">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+        <div>
+          <span style="font-size: 0.8rem; font-weight: 800; color: var(--accent-gold-hover); text-transform: uppercase; letter-spacing: 0.05em;">
+            <i class="fa-solid fa-circle-info"></i> Smart India Hackathon 2026 Brief
+          </span>
+          <h2 style="font-size: 1.8rem; color: var(--slate-900); margin-top: 4px;">SIH 2026 Executive Problem Statement Brief</h2>
+        </div>
+        <span class="team-badge" style="font-size: 0.85rem; padding: 6px 14px;">
+          MoSJE Priority Solution
+        </span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <div style="background: var(--slate-50); padding: 20px; border-radius: 12px; border: 1px solid var(--slate-100);">
+          <h4 style="color: var(--primary-700); font-size: 1.05rem; margin-bottom: 8px;">
+            <i class="fa-solid fa-bullseye"></i> Problem Objective
+          </h4>
+          <p style="font-size: 0.92rem; color: var(--slate-600);">
+            Develop an AI-powered hyper-local advisory platform for rural micro-entrepreneurs to eliminate predatory informal lending, automate MoSJE scheme subvention matching, and enable bankable loan applications.
+          </p>
+        </div>
+
+        <div style="background: var(--slate-50); padding: 20px; border-radius: 12px; border: 1px solid var(--slate-100);">
+          <h4 style="color: var(--emerald-600); font-size: 1.05rem; margin-bottom: 8px;">
+            <i class="fa-solid fa-users"></i> Target Beneficiaries
+          </h4>
+          <p style="font-size: 0.92rem; color: var(--slate-600);">
+            Scheduled Castes (SC), Scheduled Tribes (ST), Other Backward Classes (OBC), Safai Karamcharis, and Women Self-Help Groups (SHGs) under NSFDC, NBCFDC, NSKFDC, and PM-DAKSH.
+          </p>
+        </div>
+
+        <div style="background: var(--slate-50); padding: 20px; border-radius: 12px; border: 1px solid var(--slate-100);">
+          <h4 style="color: var(--accent-gold-hover); font-size: 1.05rem; margin-bottom: 8px;">
+            <i class="fa-solid fa-lightbulb"></i> Key Innovation
+          </h4>
+          <p style="font-size: 0.92rem; color: var(--slate-600);">
+            Multilingual Voice AI (7 Languages), Web Speech TTS audio readout for illiterate artisans, real-time market demand index, and 1-click Bankable Detailed Project Report (DPR) generation.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Topic 1: AI Business Advisory Copilot -->
     <section id="copilot" class="topic-wrapper">
@@ -541,7 +568,7 @@
             <div style="font-size: 0.85rem; font-weight: 700; border-top: 1px solid #475569; width: 200px; padding-top: 4px;">Signature of Entrepreneur</div>
           </div>
           <div style="text-align: center;">
-            <div style="height: 40px; font-family: cursive; color: #004d40; font-size: 0.85rem;">Leads: Arnab Gayen & Ujjawal Dubey</div>
+            <div style="height: 40px; font-family: cursive; color: #004d40; font-size: 0.85rem;">Co-Leads: Arnab Gayen & Ujjawal Dubey</div>
             <div style="font-size: 0.85rem; font-weight: 700; border-top: 1px solid #475569; width: 220px; padding-top: 4px;">Verification Seal (Code Catalyst)</div>
           </div>
         </div>
@@ -564,10 +591,10 @@
 
     <!-- Topic 7: Dedicated Team & Leadership Showcase (All 6 Members) -->
     <section id="team" class="topic-wrapper">
-      <div class="topic-badge"><i class="fa-solid fa-users"></i> Topic 07 • Project Leadership</div>
+      <div class="topic-badge"><i class="fa-solid fa-users"></i> Topic 07 • SIH 2026 Team Roster</div>
       <div class="section-header" style="text-align: center; margin-bottom: 32px;">
         <h2 class="section-title" id="teamHeader">7. Team Code Catalyst Members</h2>
-        <p class="section-desc">Architects, engineers, and designers of the MoSJE AI-Driven Rural Micro-Entrepreneur Assistant.</p>
+        <p class="section-desc">Co-Leads: Arnab Gayen & Ujjawal Dubey | Team Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit</p>
       </div>
 
       <div class="team-grid" id="teamContainer">
@@ -577,13 +604,13 @@
 
   </main>
 
-  <!-- Hackathon Impact Footer -->
+  <!-- SIH 2026 Presentation Footer -->
   <footer id="impact" class="gradient-bg-primary" style="padding: 50px 0 30px; margin-top: 40px;">
     <div class="section-container" style="color: white;">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
         <div>
           <div class="team-badge" style="background: rgba(255,255,255,0.15); color: #fef08a; margin-bottom: 16px;">
-            Ministry of Social Justice and Empowerment (MoSJE)
+            Smart India Hackathon 2026 (SIH 2026) | MoSJE
           </div>
           <h3 style="font-size: 1.7rem; color: white; margin-bottom: 16px;">
             AI-Driven Hyper-Local Business Advisory & Financial Assistant
@@ -610,7 +637,8 @@
             <i class="fa-solid fa-code-branch text-amber-400"></i> Project Credits & Team Info
           </h4>
           <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.92rem;">
-            <div><strong>Team Name:</strong> Code Catalyst</div>
+            <div><strong>Event:</strong> Smart India Hackathon 2026 (SIH 2026)</div>
+            <div><strong>Team Name:</strong> Code Catalyst (6 Members)</div>
             <div><strong>Co-Leads:</strong> Arnab Gayen & Ujjawal Dubey</div>
             <div><strong>Team Members:</strong> Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit</div>
             <div><strong>Target Beneficiaries:</strong> SC, ST, OBC, Safai Karamchari & Women Rural Artisans</div>
@@ -620,7 +648,7 @@
       </div>
 
       <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 24px; text-align: center; font-size: 0.85rem; color: #b2dfdb;">
-        &copy; 2026 Team Code Catalyst (Arnab Gayen, Ujjawal Dubey, Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit). Built for Ministry of Social Justice and Empowerment (MoSJE). All rights reserved.
+        &copy; 2026 Team Code Catalyst (Arnab Gayen, Ujjawal Dubey, Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit). Built for Ministry of Social Justice and Empowerment (MoSJE) - Smart India Hackathon 2026. All rights reserved.
       </div>
     </div>
   </footer>
