@@ -1,7 +1,7 @@
 /**
  * GrameenVikas AI - MoSJE Micro-Entrepreneur Advisory Platform
  * Interactive Logic File
- * Team: Code Catalyst | Lead: Arnab Gayen
+ * Team: Code Catalyst | Leads: Arnab Gayen & Ujjawal Dubey
  */
 
 let currentLang = 'en';
@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   runSchemeMatcher();
   calculateFinancials();
   renderProducts();
+  renderTeam();
 });
 
 /* ==========================================================================
@@ -163,7 +164,6 @@ function sendUserMessage() {
 
     // Speak AI response if audio enabled
     if (isAudioActive) {
-      // Strip HTML tags for TTS
       const plainText = responseText.replace(/<[^>]*>?/gm, '');
       speakText(plainText);
     }
@@ -450,7 +450,7 @@ function renderCashflowChart(monthlyRev, monthlyOpex, monthlyEmi) {
   if (cashflowChart) cashflowChart.destroy();
 
   const labels = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12'];
-  const revenueData = labels.map((_, i) => Math.round(monthlyRev * (1 + (i * 0.03)))); // 3% monthly growth
+  const revenueData = labels.map((_, i) => Math.round(monthlyRev * (1 + (i * 0.03))));
   const expenseData = labels.map(() => monthlyOpex + monthlyEmi);
   const netProfitData = revenueData.map((r, i) => r - expenseData[i]);
 
@@ -488,13 +488,11 @@ function renderCashflowChart(monthlyRev, monthlyOpex, monthlyEmi) {
 function printBankableDPR() {
   const now = new Date();
   document.getElementById('dprDate').innerText = `Date: ${now.toLocaleDateString('en-IN')}`;
-
-  // Trigger native browser print modal formatted specifically for DPR
   window.print();
 }
 
 /* ==========================================================================
-   7. Hyper-Local Market Linkage Catalog
+   7. Hyper-Local Market Linkage & Team Logic
    ========================================================================== */
 function renderProducts() {
   const container = document.getElementById('productsContainer');
@@ -506,7 +504,7 @@ function renderProducts() {
     card.style.padding = '20px';
     card.style.display = 'flex';
     card.style.flexDirection = 'column';
-    card.style.justifySpaceBetween = 'space-between';
+    card.style.justifyContent = 'space-between';
 
     card.innerHTML = `
       <div>
@@ -544,4 +542,29 @@ function renderProducts() {
 
 function connectBuyer(productName, artisanName) {
   alert(`Connecting to ${artisanName} for procurement of "${productName}".\nTransaction route: GeM Govt e-Marketplace / ONDC Verified Channel.`);
+}
+
+function renderTeam() {
+  const container = document.getElementById('teamContainer');
+  if (!container) return;
+  container.innerHTML = '';
+
+  APP_DATA.teamMembers.forEach(member => {
+    const card = document.createElement('div');
+    card.className = 'glass-card team-card';
+    card.innerHTML = `
+      <div class="team-avatar">
+        ${member.avatarSvg}
+      </div>
+      <span class="team-role-pill">${member.role}</span>
+      <h3 style="font-size: 1.3rem; margin-bottom: 6px; color: var(--slate-900);">${member.name}</h3>
+      <p style="font-size: 0.9rem; color: var(--slate-600); margin-bottom: 16px;">
+        ${member.bio}
+      </p>
+      <span class="team-badge" style="background: rgba(16, 185, 129, 0.15); color: var(--emerald-600); border-color: rgba(16, 185, 129, 0.4);">
+        <i class="fa-solid fa-star"></i> ${member.tag}
+      </span>
+    `;
+    container.appendChild(card);
+  });
 }

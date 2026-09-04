@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GrameenVikas AI - MoSJE Micro-Entrepreneur Advisory Platform | Code Catalyst</title>
-  <meta name="description" content="AI-Driven Hyper-Local Business Advisory and Financial Structuring Assistant for Rural Micro-Entrepreneurs by Team Code Catalyst for MoSJE (Problem Statement #91).">
+  <title>GrameenVikas AI - MoSJE Micro-Entrepreneur Advisory Platform | Team Code Catalyst</title>
+  <meta name="description" content="AI-Driven Hyper-Local Business Advisory and Financial Structuring Assistant for Rural Micro-Entrepreneurs by Team Code Catalyst (Leads: Arnab Gayen & Ujjawal Dubey) for MoSJE.">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,12 +23,12 @@
       <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
         <span style="font-weight: 700; color: var(--accent-gold);"><i class="fa-solid fa-building-columns"></i> Ministry of Social Justice and Empowerment (MoSJE)</span>
         <span style="opacity: 0.6;">|</span>
-        <span>SIH Problem Statement #91</span>
+        <span>AI-Driven Hyper-Local Business Advisory & Financial Assistant</span>
       </div>
       <div style="display: flex; align-items: center; gap: 12px;">
         <span class="team-badge"><i class="fa-solid fa-code"></i> Team: Code Catalyst</span>
-        <span class="team-badge" style="background: rgba(16, 185, 129, 0.2); border-color: #10b981; color: #34d399;">
-          <i class="fa-solid fa-user-gear"></i> Lead: Arnab Gayen
+        <span class="team-badge" style="background: rgba(16, 185, 129, 0.2); border-color: #10b981; color: #34d399;" id="topLeadsBadge">
+          <i class="fa-solid fa-user-gear"></i> Leads: Arnab Gayen & Ujjawal Dubey
         </span>
       </div>
     </div>
@@ -51,7 +51,7 @@
         <li><a href="#schemes" class="nav-link" id="navSchemes"><i class="fa-solid fa-hand-holding-dollar"></i> Scheme Matcher</a></li>
         <li><a href="#financials" class="nav-link" id="navFinancials"><i class="fa-solid fa-calculator"></i> Financial Structuring</a></li>
         <li><a href="#linkage" class="nav-link" id="navLinkage"><i class="fa-solid fa-store"></i> Market Linkage</a></li>
-        <li><a href="#impact" class="nav-link" id="navImpact"><i class="fa-solid fa-users"></i> Team & Impact</a></li>
+        <li><a href="#team" class="nav-link" id="navTeam"><i class="fa-solid fa-users"></i> Team & Leadership</a></li>
       </ul>
 
       <div class="controls-group">
@@ -83,13 +83,13 @@
   <header class="hero-section">
     <div>
       <div class="hero-badge">
-        <i class="fa-solid fa-wand-magic-sparkles"></i> MoSJE AI Innovation #91
+        <i class="fa-solid fa-wand-magic-sparkles"></i> MoSJE AI Innovation Platform
       </div>
       <h1 class="hero-title">
         <span class="gradient-text" id="heroTitle">AI Business & Financial Assistant for Rural Micro-Entrepreneurs</span>
       </h1>
       <p class="hero-subtitle" id="heroSubtitle">
-        Get hyper-local business advice, match with MoSJE schemes (VISVAS, NSFDC, NBCFDC, PM-DAKSH), project 12-month cash flows, and generate bankable project reports in 7 regional languages.
+        Get hyper-local business advice, match with MoSJE schemes (VISVAS, NSFDC, NBCFDC), project 12-month cash flows, and generate bankable project reports in 7 regional languages.
       </p>
 
       <div class="hero-actions">
@@ -147,292 +147,297 @@
     <button onclick="stopAudioReadout()" style="margin-left: 16px; background: rgba(255,255,255,0.2); border: none; color: white; padding: 4px 12px; border-radius: 4px; cursor: pointer; font-weight: 700;">Stop Audio</button>
   </div>
 
-  <!-- Feature 1: AI Business Advisory Copilot ("GrameenVikas AI") -->
-  <section id="copilot" class="section-container">
-    <div class="section-header">
-      <span class="hero-badge"><i class="fa-solid fa-robot"></i> Voice & Multilingual Copilot</span>
-      <h2 class="section-title" id="aiCopilotHeader">GrameenVikas AI Copilot</h2>
-      <p class="section-desc" id="aiCopilotSub">Ask any question about starting a rural business, raw material procurement, product pricing, or MoSJE loan applications in your mother tongue.</p>
-    </div>
+  <!-- Main Content Container with Distinct Topic Wrappers -->
+  <main class="section-container">
 
-    <div class="copilot-grid">
-      <!-- Quick Prompts Panel -->
-      <div class="glass-card" style="padding: 20px;">
-        <h4 style="margin-bottom: 16px; font-size: 1rem; color: var(--primary-800);" id="quickPromptsTitle"><i class="fa-solid fa-lightbulb text-amber-500"></i> Quick Advisory Prompts:</h4>
-        <div class="preset-prompts">
-          <button class="prompt-chip" onclick="askAiPreset('pottery')">
-            <i class="fa-solid fa-mortar-pestle text-amber-600"></i> How to set up a Pottery Unit under ₹50,000?
-          </button>
-          <button class="prompt-chip" onclick="askAiPreset('schemes')">
-            <i class="fa-solid fa-hand-holding-dollar text-emerald-600"></i> Which MoSJE loan offers lowest interest for female SHGs?
-          </button>
-          <button class="prompt-chip" onclick="askAiPreset('handloom')">
-            <i class="fa-solid fa-scroll text-purple-600"></i> How to price handloom sarees for urban boutiques?
-          </button>
-          <button class="prompt-chip" onclick="askAiPreset('vermicompost')">
-            <i class="fa-solid fa-seedling text-emerald-600"></i> What is the profit margin for 10 vermicompost beds?
-          </button>
-          <button class="prompt-chip" onclick="askAiPreset('dairy')">
-            <i class="fa-solid fa-cow text-amber-700"></i> How to apply for MUDRA Kishor loan for Gir cow dairy?
-          </button>
-        </div>
+    <!-- Topic 1: AI Business Advisory Copilot -->
+    <section id="copilot" class="topic-wrapper">
+      <div class="topic-badge"><i class="fa-solid fa-robot"></i> Topic 01 • Artificial Intelligence</div>
+      <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+        <h2 class="section-title" id="aiCopilotHeader">1. AI Business Advisory Copilot</h2>
+        <p class="section-desc" id="aiCopilotSub">Ask any question about starting a rural business, raw material procurement, product pricing, or MoSJE loan applications in your mother tongue.</p>
       </div>
 
-      <!-- Chat Interface -->
-      <div class="glass-card chat-box">
-        <div class="chat-history" id="chatHistory">
-          <!-- Initial AI greeting -->
-          <div class="chat-msg ai">
-            <div style="font-weight: 700; font-size: 0.8rem; color: var(--primary-700); margin-bottom: 4px;">
-              <i class="fa-solid fa-robot"></i> GrameenVikas AI Assistant (MoSJE)
+      <div class="copilot-grid">
+        <!-- Quick Prompts Panel -->
+        <div class="glass-card" style="padding: 20px;">
+          <h4 style="margin-bottom: 16px; font-size: 1rem; color: var(--primary-800);" id="quickPromptsTitle"><i class="fa-solid fa-lightbulb text-amber-500"></i> Quick Advisory Prompts:</h4>
+          <div class="preset-prompts">
+            <button class="prompt-chip" onclick="askAiPreset('pottery')">
+              <i class="fa-solid fa-mortar-pestle text-amber-600"></i> How to set up a Pottery Unit under ₹50,000?
+            </button>
+            <button class="prompt-chip" onclick="askAiPreset('schemes')">
+              <i class="fa-solid fa-hand-holding-dollar text-emerald-600"></i> Which MoSJE loan offers lowest interest for female SHGs?
+            </button>
+            <button class="prompt-chip" onclick="askAiPreset('handloom')">
+              <i class="fa-solid fa-scroll text-purple-600"></i> How to price handloom sarees for urban boutiques?
+            </button>
+            <button class="prompt-chip" onclick="askAiPreset('vermicompost')">
+              <i class="fa-solid fa-seedling text-emerald-600"></i> What is the profit margin for 10 vermicompost beds?
+            </button>
+            <button class="prompt-chip" onclick="askAiPreset('dairy')">
+              <i class="fa-solid fa-cow text-amber-700"></i> How to apply for MUDRA Kishor loan for Gir cow dairy?
+            </button>
+          </div>
+        </div>
+
+        <!-- Chat Interface -->
+        <div class="glass-card chat-box">
+          <div class="chat-history" id="chatHistory">
+            <!-- Initial AI greeting -->
+            <div class="chat-msg ai">
+              <div style="font-weight: 700; font-size: 0.8rem; color: var(--primary-700); margin-bottom: 4px;">
+                <i class="fa-solid fa-robot"></i> GrameenVikas AI Assistant (MoSJE)
+              </div>
+              Namaste! I am your AI Business & Financial Advisor. How can I help you start or expand your rural enterprise today? You can type in any language or click the microphone button to speak!
             </div>
-            Namaste! I am your AI Business & Financial Advisor. How can I help you start or expand your rural enterprise today? You can type in any language or click the microphone button to speak!
+          </div>
+
+          <div class="chat-input-bar">
+            <input type="text" id="userInput" class="chat-input" placeholder="Ask in English, Hindi, Bengali, Tamil, etc..." onkeypress="handleKeyPress(event)">
+            
+            <!-- Voice Record Simulation -->
+            <button class="voice-btn" id="micBtn" onclick="toggleVoiceInput()" title="Speak your query">
+              <i class="fa-solid fa-microphone"></i>
+            </button>
+
+            <!-- Send Button -->
+            <button class="btn-primary" style="padding: 10px 20px; border-radius: var(--radius-full);" onclick="sendUserMessage()">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
           </div>
         </div>
-
-        <div class="chat-input-bar">
-          <input type="text" id="userInput" class="chat-input" placeholder="Ask in English, Hindi, Bengali, Tamil, etc..." onkeypress="handleKeyPress(event)">
-          
-          <!-- Voice Record Simulation -->
-          <button class="voice-btn" id="micBtn" onclick="toggleVoiceInput()" title="Speak your query">
-            <i class="fa-solid fa-microphone"></i>
-          </button>
-
-          <!-- Send Button -->
-          <button class="btn-primary" style="padding: 10px 20px; border-radius: var(--radius-full);" onclick="sendUserMessage()">
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Feature 2: Hyper-Local Market Demand Predictor -->
-  <section id="demand" class="section-container" style="background: rgba(0,137,123,0.03); padding-top: 40px; padding-bottom: 40px; border-radius: var(--radius-lg);">
-    <div class="section-header">
-      <span class="hero-badge"><i class="fa-solid fa-chart-pie"></i> Hyper-Local Data Engine</span>
-      <h2 class="section-title">Market Demand Predictor & Sector Analyzer</h2>
-      <p class="section-desc">Select your State, District, and Business Sector to analyze real-time village market demand index, competition density, and profit margins.</p>
-    </div>
-
-    <!-- Filter Bar -->
-    <div class="glass-card" style="padding: 20px; margin-bottom: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
-      <div>
-        <label class="form-label" id="selectStateLabel"><i class="fa-solid fa-map-location-dot"></i> Select State</label>
-        <select id="stateSelect" class="form-control" onchange="updateDistricts()">
-          <!-- Populated dynamically via JS -->
-        </select>
+    <!-- Topic 2: Hyper-Local Market Demand Predictor -->
+    <section id="demand" class="topic-wrapper" style="background: rgba(0, 137, 123, 0.03);">
+      <div class="topic-badge"><i class="fa-solid fa-chart-pie"></i> Topic 02 • Market Intelligence</div>
+      <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+        <h2 class="section-title">2. Market Demand Predictor & Sector Analyzer</h2>
+        <p class="section-desc">Select your State, District, and Business Sector to analyze real-time village market demand index, competition density, and profit margins.</p>
       </div>
 
-      <div>
-        <label class="form-label" id="selectDistrictLabel"><i class="fa-solid fa-city"></i> Select District</label>
-        <select id="districtSelect" class="form-control" onchange="recalculateMarketData()">
-          <!-- Populated dynamically via JS -->
-        </select>
-      </div>
-
-      <div>
-        <label class="form-label" id="selectSectorLabel"><i class="fa-solid fa-briefcase"></i> Select Business Sector</label>
-        <select id="sectorSelect" class="form-control" onchange="recalculateMarketData()">
-          <!-- Populated dynamically via JS -->
-        </select>
-      </div>
-    </div>
-
-    <!-- Market Metrics Scorecard -->
-    <div class="metrics-grid">
-      <div class="glass-card metric-card">
-        <i class="fa-solid fa-chart-line text-emerald-600" style="font-size: 1.5rem;"></i>
-        <div class="metric-value" id="valDemandScore">88/100</div>
-        <div class="metric-label" id="demandScore">Local Demand Index</div>
-      </div>
-
-      <div class="glass-card metric-card">
-        <i class="fa-solid fa-users-rays text-amber-500" style="font-size: 1.5rem;"></i>
-        <div class="metric-value" id="valCompetition">Medium</div>
-        <div class="metric-label" id="competitionScore">Competitor Density</div>
-      </div>
-
-      <div class="glass-card metric-card">
-        <i class="fa-solid fa-sack-dollar text-primary-600" style="font-size: 1.5rem;"></i>
-        <div class="metric-value" id="valProfitMargin">42%</div>
-        <div class="metric-label" id="profitMargin">Avg. Profit Margin</div>
-      </div>
-
-      <div class="glass-card metric-card">
-        <i class="fa-solid fa-cubes text-purple-600" style="font-size: 1.5rem;"></i>
-        <div class="metric-value" id="valRawMaterial">95/100</div>
-        <div class="metric-label" id="rawMaterialScore">Raw Material Access</div>
-      </div>
-    </div>
-
-    <!-- Market Analysis & Chart Grid -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-      <div class="glass-card" style="padding: 24px;">
-        <h4 style="margin-bottom: 16px; font-size: 1.1rem; color: var(--primary-800);">
-          <i class="fa-solid fa-bullseye"></i> Hyper-Local Sector Feasibility Radar
-        </h4>
-        <div style="position: relative; height: 260px;">
-          <canvas id="marketRadarChart"></canvas>
-        </div>
-      </div>
-
-      <div class="glass-card" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+      <!-- Filter Bar -->
+      <div class="glass-card" style="padding: 20px; margin-bottom: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
         <div>
-          <h4 style="margin-bottom: 12px; font-size: 1.1rem; color: var(--primary-800);" id="sectorNameTitle">Clay & Terracotta Handicrafts</h4>
-          <p style="font-size: 0.95rem; color: var(--slate-600); margin-bottom: 16px;" id="sectorDescription">
-            Traditional earthenware, clay cookware, and eco-friendly home decor items with high urban and festival demand.
-          </p>
-          <div style="background: var(--slate-50); padding: 12px; border-radius: 8px; font-size: 0.88rem; margin-bottom: 12px;">
-            <strong><i class="fa-solid fa-gears text-primary-600"></i> Key Equipment:</strong> <span id="sectorMachinery">Electric potter wheel, eco-kiln, clay mixing pug mill</span>
-          </div>
-          <div style="background: var(--slate-50); padding: 12px; border-radius: 8px; font-size: 0.88rem;">
-            <strong><i class="fa-solid fa-store text-amber-600"></i> Target Buyer Channels:</strong> <span id="sectorBuyers">Urban home decor stores, Craft Fairs, Export Houses, Amazon Saheli, GeM Portal</span>
-          </div>
-        </div>
-
-        <div style="margin-top: 20px;">
-          <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="loadSectorIntoCalc()">
-            <i class="fa-solid fa-arrow-right"></i> Load this Sector into Financial Calculator
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feature 3: MoSJE & Central Scheme Matcher Engine -->
-  <section id="schemes" class="section-container">
-    <div class="section-header">
-      <span class="hero-badge"><i class="fa-solid fa-hand-holding-dollar"></i> Smart Financial Matcher</span>
-      <h2 class="section-title" id="schemeMatchHeader">MoSJE & Govt. Scheme Eligibility Matcher</h2>
-      <p class="section-desc">Enter your profile details below to get instantly matched with interest subventions, low-interest micro-credits, and skill grants from NSFDC, NBCFDC, NSKFDC, and MUDRA.</p>
-    </div>
-
-    <!-- Scheme Filter Bar -->
-    <div class="glass-card" style="padding: 24px; margin-bottom: 30px;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-items: end;">
-        <div>
-          <label class="form-label"><i class="fa-solid fa-users"></i> Social Category</label>
-          <select id="userCategory" class="form-control" onchange="runSchemeMatcher()">
-            <option value="SC">Scheduled Caste (SC)</option>
-            <option value="OBC">Other Backward Classes (OBC)</option>
-            <option value="Safai Karamchari">Safai Karamchari / Waste Picker</option>
-            <option value="ST">Scheduled Tribe (ST)</option>
-            <option value="Women">Women SHG / Entrepreneur</option>
+          <label class="form-label" id="selectStateLabel"><i class="fa-solid fa-map-location-dot"></i> Select State</label>
+          <select id="stateSelect" class="form-control" onchange="updateDistricts()">
+            <!-- Populated dynamically via JS -->
           </select>
         </div>
 
         <div>
-          <label class="form-label"><i class="fa-solid fa-indian-rupee-sign"></i> Capital Required (₹)</label>
-          <input type="number" id="userCapital" class="form-control" value="140000" step="10000" onchange="runSchemeMatcher()">
-        </div>
-
-        <div>
-          <label class="form-label"><i class="fa-solid fa-layer-group"></i> Entity Type</label>
-          <select id="userEntityType" class="form-control" onchange="runSchemeMatcher()">
-            <option value="Individual">Individual Micro-Entrepreneur</option>
-            <option value="SHG">Self Help Group (SHG)</option>
-            <option value="Producer Group">Farmer Producer Org (FPO / Cooperative)</option>
+          <label class="form-label" id="selectDistrictLabel"><i class="fa-solid fa-city"></i> Select District</label>
+          <select id="districtSelect" class="form-control" onchange="recalculateMarketData()">
+            <!-- Populated dynamically via JS -->
           </select>
         </div>
 
         <div>
-          <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="runSchemeMatcher()">
-            <i class="fa-solid fa-filter"></i> Run AI Matcher
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Matched Schemes Cards Grid -->
-    <div class="schemes-grid" id="schemesContainer">
-      <!-- Populated dynamically via JS -->
-    </div>
-  </section>
-
-  <!-- Feature 4: Financial Structuring & 12-Month Projection -->
-  <section id="financials" class="section-container" style="background: rgba(245, 158, 11, 0.03); padding-top: 40px; padding-bottom: 40px; border-radius: var(--radius-lg);">
-    <div class="section-header">
-      <span class="hero-badge"><i class="fa-solid fa-calculator"></i> Financial Engineering</span>
-      <h2 class="section-title" id="calcHeader">Financial Structuring & 12-Month Projection</h2>
-      <p class="section-desc">Simulate monthly revenue, raw material, labor, interest subvention, and net cash flow to generate a bankable financial structure.</p>
-    </div>
-
-    <div class="calc-container">
-      <!-- Financial Input Form -->
-      <div class="glass-card" style="padding: 24px;">
-        <h4 style="margin-bottom: 20px; font-size: 1.1rem; color: var(--primary-800);">
-          <i class="fa-solid fa-sliders text-amber-600"></i> Financial Parameters (Monthly)
-        </h4>
-
-        <div class="form-group">
-          <label class="form-label">Est. Monthly Gross Revenue (₹)</label>
-          <input type="number" id="calcRevenue" class="form-control" value="45000" oninput="calculateFinancials()">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Raw Material & Supplies Cost (₹)</label>
-          <input type="number" id="calcRawMaterial" class="form-control" value="16000" oninput="calculateFinancials()">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Labor & Helper Wages (₹)</label>
-          <input type="number" id="calcLabor" class="form-control" value="6000" oninput="calculateFinancials()">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Utilities, Transport & Packaging (₹)</label>
-          <input type="number" id="calcUtilities" class="form-control" value="3500" oninput="calculateFinancials()">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Applied Loan Amount (₹)</label>
-          <input type="number" id="calcLoan" class="form-control" value="140000" oninput="calculateFinancials()">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">MoSJE Interest Subvention Rate (%)</label>
-          <select id="calcSubvention" class="form-control" onchange="calculateFinancials()">
-            <option value="5">5% Subvention (VISVAS / NSFDC Rate)</option>
-            <option value="4.5">4.5% Rate (NSFDC Female SC Scheme)</option>
-            <option value="0">0% (Standard Bank Rate ~ 9.5%)</option>
+          <label class="form-label" id="selectSectorLabel"><i class="fa-solid fa-briefcase"></i> Select Business Sector</label>
+          <select id="sectorSelect" class="form-control" onchange="recalculateMarketData()">
+            <!-- Populated dynamically via JS -->
           </select>
         </div>
       </div>
 
-      <!-- Financial Chart & Summary Cards -->
-      <div>
-        <div class="glass-card" style="padding: 24px; margin-bottom: 20px;">
+      <!-- Market Metrics Scorecard -->
+      <div class="metrics-grid">
+        <div class="glass-card metric-card">
+          <i class="fa-solid fa-chart-line text-emerald-600" style="font-size: 1.5rem;"></i>
+          <div class="metric-value" id="valDemandScore">88/100</div>
+          <div class="metric-label" id="demandScore">Local Demand Index</div>
+        </div>
+
+        <div class="glass-card metric-card">
+          <i class="fa-solid fa-users-rays text-amber-500" style="font-size: 1.5rem;"></i>
+          <div class="metric-value" id="valCompetition">Medium</div>
+          <div class="metric-label" id="competitionScore">Competitor Density</div>
+        </div>
+
+        <div class="glass-card metric-card">
+          <i class="fa-solid fa-sack-dollar text-primary-600" style="font-size: 1.5rem;"></i>
+          <div class="metric-value" id="valProfitMargin">42%</div>
+          <div class="metric-label" id="profitMargin">Avg. Profit Margin</div>
+        </div>
+
+        <div class="glass-card metric-card">
+          <i class="fa-solid fa-cubes text-purple-600" style="font-size: 1.5rem;"></i>
+          <div class="metric-value" id="valRawMaterial">95/100</div>
+          <div class="metric-label" id="rawMaterialScore">Raw Material Access</div>
+        </div>
+      </div>
+
+      <!-- Market Analysis & Chart Grid -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div class="glass-card" style="padding: 24px;">
           <h4 style="margin-bottom: 16px; font-size: 1.1rem; color: var(--primary-800);">
-            <i class="fa-solid fa-chart-column"></i> 12-Month Net Cash Flow Forecast
+            <i class="fa-solid fa-bullseye"></i> Hyper-Local Sector Feasibility Radar
           </h4>
-          <div style="position: relative; height: 220px;">
-            <canvas id="cashflowChart"></canvas>
+          <div style="position: relative; height: 260px;">
+            <canvas id="marketRadarChart"></canvas>
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-          <div class="glass-card" style="padding: 16px; text-align: center;">
-            <div style="font-size: 0.8rem; color: var(--slate-600); font-weight: 700;">Est. Monthly Net Income</div>
-            <div style="font-size: 1.6rem; font-weight: 800; color: var(--emerald-600);" id="resNetIncome">₹17,250</div>
-            <div style="font-size: 0.72rem; color: var(--slate-600);" id="resMargin">Margin: ~38.3%</div>
+        <div class="glass-card" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h4 style="margin-bottom: 12px; font-size: 1.1rem; color: var(--primary-800);" id="sectorNameTitle">Clay & Terracotta Handicrafts</h4>
+            <p style="font-size: 0.95rem; color: var(--slate-600); margin-bottom: 16px;" id="sectorDescription">
+              Traditional earthenware, clay cookware, and eco-friendly home decor items with high urban and festival demand.
+            </p>
+            <div style="background: var(--slate-50); padding: 12px; border-radius: 8px; font-size: 0.88rem; margin-bottom: 12px;">
+              <strong><i class="fa-solid fa-gears text-primary-600"></i> Key Equipment:</strong> <span id="sectorMachinery">Electric potter wheel, eco-kiln, clay mixing pug mill</span>
+            </div>
+            <div style="background: var(--slate-50); padding: 12px; border-radius: 8px; font-size: 0.88rem;">
+              <strong><i class="fa-solid fa-store text-amber-600"></i> Target Buyer Channels:</strong> <span id="sectorBuyers">Urban home decor stores, Craft Fairs, Export Houses, Amazon Saheli, GeM Portal</span>
+            </div>
           </div>
 
-          <div class="glass-card" style="padding: 16px; text-align: center;">
-            <div style="font-size: 0.8rem; color: var(--slate-600); font-weight: 700;">Est. Monthly Loan EMI</div>
-            <div style="font-size: 1.6rem; font-weight: 800; color: var(--primary-700);" id="resEmi">₹2,250</div>
-            <div style="font-size: 0.72rem; color: var(--emerald-600); font-weight: 700;">MoSJE 5% Subvention Active</div>
+          <div style="margin-top: 20px;">
+            <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="loadSectorIntoCalc()">
+              <i class="fa-solid fa-arrow-right"></i> Load this Sector into Financial Calculator
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Feature 5: 1-Click Bankable DPR Printable Preview -->
-    <div style="margin-top: 40px;" id="dprContainer">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+    <!-- Topic 3: MoSJE Scheme Matcher Engine -->
+    <section id="schemes" class="topic-wrapper">
+      <div class="topic-badge"><i class="fa-solid fa-hand-holding-dollar"></i> Topic 03 • Government Credit</div>
+      <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+        <h2 class="section-title" id="schemeMatchHeader">3. MoSJE & Govt. Scheme Eligibility Matcher</h2>
+        <p class="section-desc">Enter your profile details below to get instantly matched with interest subventions, low-interest micro-credits, and skill grants from NSFDC, NBCFDC, NSKFDC, and MUDRA.</p>
+      </div>
+
+      <!-- Scheme Filter Bar -->
+      <div class="glass-card" style="padding: 24px; margin-bottom: 24px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-items: end;">
+          <div>
+            <label class="form-label"><i class="fa-solid fa-users"></i> Social Category</label>
+            <select id="userCategory" class="form-control" onchange="runSchemeMatcher()">
+              <option value="SC">Scheduled Caste (SC)</option>
+              <option value="OBC">Other Backward Classes (OBC)</option>
+              <option value="Safai Karamchari">Safai Karamchari / Waste Picker</option>
+              <option value="ST">Scheduled Tribe (ST)</option>
+              <option value="Women">Women SHG / Entrepreneur</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="form-label"><i class="fa-solid fa-indian-rupee-sign"></i> Capital Required (₹)</label>
+            <input type="number" id="userCapital" class="form-control" value="140000" step="10000" onchange="runSchemeMatcher()">
+          </div>
+
+          <div>
+            <label class="form-label"><i class="fa-solid fa-layer-group"></i> Entity Type</label>
+            <select id="userEntityType" class="form-control" onchange="runSchemeMatcher()">
+              <option value="Individual">Individual Micro-Entrepreneur</option>
+              <option value="SHG">Self Help Group (SHG)</option>
+              <option value="Producer Group">Farmer Producer Org (FPO / Cooperative)</option>
+            </select>
+          </div>
+
+          <div>
+            <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="runSchemeMatcher()">
+              <i class="fa-solid fa-filter"></i> Run AI Matcher
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Matched Schemes Cards Grid -->
+      <div class="schemes-grid" id="schemesContainer">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </section>
+
+    <!-- Topic 4: Financial Structuring & Cash Flow -->
+    <section id="financials" class="topic-wrapper" style="background: rgba(245, 158, 11, 0.03);">
+      <div class="topic-badge"><i class="fa-solid fa-calculator"></i> Topic 04 • Financial Engineering</div>
+      <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+        <h2 class="section-title" id="calcHeader">4. Financial Structuring & 12-Month Projection</h2>
+        <p class="section-desc">Simulate monthly revenue, raw material, labor, interest subvention, and net cash flow to generate a bankable financial structure.</p>
+      </div>
+
+      <div class="calc-container">
+        <!-- Financial Input Form -->
+        <div class="glass-card" style="padding: 24px;">
+          <h4 style="margin-bottom: 20px; font-size: 1.1rem; color: var(--primary-800);">
+            <i class="fa-solid fa-sliders text-amber-600"></i> Financial Parameters (Monthly)
+          </h4>
+
+          <div class="form-group">
+            <label class="form-label">Est. Monthly Gross Revenue (₹)</label>
+            <input type="number" id="calcRevenue" class="form-control" value="45000" oninput="calculateFinancials()">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Raw Material & Supplies Cost (₹)</label>
+            <input type="number" id="calcRawMaterial" class="form-control" value="16000" oninput="calculateFinancials()">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Labor & Helper Wages (₹)</label>
+            <input type="number" id="calcLabor" class="form-control" value="6000" oninput="calculateFinancials()">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Utilities, Transport & Packaging (₹)</label>
+            <input type="number" id="calcUtilities" class="form-control" value="3500" oninput="calculateFinancials()">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Applied Loan Amount (₹)</label>
+            <input type="number" id="calcLoan" class="form-control" value="140000" oninput="calculateFinancials()">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">MoSJE Interest Subvention Rate (%)</label>
+            <select id="calcSubvention" class="form-control" onchange="calculateFinancials()">
+              <option value="5">5% Subvention (VISVAS / NSFDC Rate)</option>
+              <option value="4.5">4.5% Rate (NSFDC Female SC Scheme)</option>
+              <option value="0">0% (Standard Bank Rate ~ 9.5%)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Financial Chart & Summary Cards -->
         <div>
-          <h3 style="font-size: 1.4rem;" id="dprHeader">1-Click Bankable Detailed Project Report (DPR)</h3>
-          <p style="font-size: 0.9rem; color: var(--slate-600);" id="dprSubtitle">Official format recognized by Banks, NABARD, and District Industry Centers (DIC)</p>
+          <div class="glass-card" style="padding: 24px; margin-bottom: 20px;">
+            <h4 style="margin-bottom: 16px; font-size: 1.1rem; color: var(--primary-800);">
+              <i class="fa-solid fa-chart-column"></i> 12-Month Net Cash Flow Forecast
+            </h4>
+            <div style="position: relative; height: 220px;">
+              <canvas id="cashflowChart"></canvas>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="glass-card" style="padding: 16px; text-align: center;">
+              <div style="font-size: 0.8rem; color: var(--slate-600); font-weight: 700;">Est. Monthly Net Income</div>
+              <div style="font-size: 1.6rem; font-weight: 800; color: var(--emerald-600);" id="resNetIncome">₹17,250</div>
+              <div style="font-size: 0.72rem; color: var(--slate-600);" id="resMargin">Margin: ~38.3%</div>
+            </div>
+
+            <div class="glass-card" style="padding: 16px; text-align: center;">
+              <div style="font-size: 0.8rem; color: var(--slate-600); font-weight: 700;">Est. Monthly Loan EMI</div>
+              <div style="font-size: 1.6rem; font-weight: 800; color: var(--primary-700);" id="resEmi">₹2,250</div>
+              <div style="font-size: 0.72rem; color: var(--emerald-600); font-weight: 700;">MoSJE 5% Subvention Active</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Topic 5: 1-Click Bankable DPR Printable View -->
+    <section id="dprContainer" class="topic-wrapper">
+      <div class="topic-badge"><i class="fa-solid fa-file-pdf"></i> Topic 05 • Bank Documentation</div>
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+        <div>
+          <h2 class="section-title" id="dprHeader">5. 1-Click Bankable Detailed Project Report (DPR)</h2>
+          <p class="section-desc" id="dprSubtitle">Official format recognized by Banks, NABARD, and District Industry Centers (DIC)</p>
         </div>
         <button class="btn-primary" onclick="printBankableDPR()">
           <i class="fa-solid fa-print"></i> Print / Save DPR PDF
@@ -447,7 +452,7 @@
             <p style="font-size: 0.85rem; color: #475569; font-weight: 600;">Ministry of Social Justice and Empowerment (MoSJE) Scheme Application</p>
           </div>
           <div style="text-align: right;">
-            <span style="font-weight: 800; font-size: 1rem; color: #004d40;">Code Catalyst AI Verified</span>
+            <span style="font-weight: 800; font-size: 0.95rem; color: #004d40;">Code Catalyst AI Verified</span>
             <div style="font-size: 0.75rem; color: #64748b;" id="dprDate">Date: 05-Sep-2026</div>
           </div>
         </div>
@@ -536,37 +541,79 @@
             <div style="font-size: 0.85rem; font-weight: 700; border-top: 1px solid #475569; width: 200px; padding-top: 4px;">Signature of Entrepreneur</div>
           </div>
           <div style="text-align: center;">
-            <div style="height: 40px; font-family: cursive; color: #004d40; font-size: 0.9rem;">Code Catalyst AI Engine</div>
+            <div style="height: 40px; font-family: cursive; color: #004d40; font-size: 0.85rem;">Leads: Arnab Gayen & Ujjawal Dubey</div>
             <div style="font-size: 0.85rem; font-weight: 700; border-top: 1px solid #475569; width: 220px; padding-top: 4px;">Verification Seal (Code Catalyst)</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Feature 6: Hyper-Local Market Linkage & Buyer Network -->
-  <section id="linkage" class="section-container">
-    <div class="section-header">
-      <span class="hero-badge"><i class="fa-solid fa-store"></i> Direct Market Access</span>
-      <h2 class="section-title" id="linkageHeader">Hyper-Local Market Linkage & Buyer Network</h2>
-      <p class="section-desc">Connect rural micro-entrepreneurs directly with urban boutique buyers, government procurement (GeM Portal), and ONDC e-commerce networks.</p>
-    </div>
+    <!-- Topic 6: Hyper-Local Market Linkage -->
+    <section id="linkage" class="topic-wrapper" style="background: rgba(0, 137, 123, 0.03);">
+      <div class="topic-badge"><i class="fa-solid fa-store"></i> Topic 06 • E-Commerce & Linkage</div>
+      <div class="section-header" style="text-align: left; margin-bottom: 24px;">
+        <h2 class="section-title" id="linkageHeader">6. Hyper-Local Market Linkage & Buyer Network</h2>
+        <p class="section-desc">Connect rural micro-entrepreneurs directly with urban boutique buyers, government procurement (GeM Portal), and ONDC e-commerce networks.</p>
+      </div>
 
-    <!-- Product Showcase Grid -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;" id="productsContainer">
-      <!-- Populated dynamically via JS -->
-    </div>
-  </section>
+      <!-- Product Showcase Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;" id="productsContainer">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </section>
 
-  <!-- Feature 7: Hackathon Impact & Team Code Catalyst Showcase -->
-  <footer id="impact" class="gradient-bg-primary" style="padding: 60px 0 30px; margin-top: 60px;">
+    <!-- Topic 7: Dedicated Team & Leadership Showcase -->
+    <section id="team" class="topic-wrapper">
+      <div class="topic-badge"><i class="fa-solid fa-users"></i> Topic 07 • Project Leadership</div>
+      <div class="section-header" style="text-align: center; margin-bottom: 32px;">
+        <h2 class="section-title" id="teamHeader">7. Team Code Catalyst Leadership</h2>
+        <p class="section-desc">Architects and developers of the MoSJE AI-Driven Rural Micro-Entrepreneur Assistant.</p>
+      </div>
+
+      <div class="team-grid" id="teamContainer">
+        <!-- Team Leader 1: Arnab Gayen -->
+        <div class="glass-card team-card">
+          <div class="team-avatar">
+            <svg viewBox="0 0 100 100" class="w-full h-full text-emerald-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>
+          </div>
+          <span class="team-role-pill">Team Lead & Full Stack Architect</span>
+          <h3 style="font-size: 1.3rem; margin-bottom: 6px; color: var(--slate-900);">Arnab Gayen</h3>
+          <p style="font-size: 0.9rem; color: var(--slate-600); margin-bottom: 16px;">
+            Leads product architecture, AI advisory logic integration, and financial projection engineering for rural micro-entrepreneurship.
+          </p>
+          <span class="team-badge" style="background: rgba(16, 185, 129, 0.15); color: var(--emerald-600); border-color: rgba(16, 185, 129, 0.4);">
+            <i class="fa-solid fa-star"></i> Co-Lead
+          </span>
+        </div>
+
+        <!-- Team Leader 2: Ujjawal Dubey -->
+        <div class="glass-card team-card">
+          <div class="team-avatar" style="border-color: var(--accent-gold);">
+            <svg viewBox="0 0 100 100" class="w-full h-full text-amber-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>
+          </div>
+          <span class="team-role-pill" style="background: linear-gradient(135deg, #d97706, #f59e0b);">Team Lead & AI Financial Engineer</span>
+          <h3 style="font-size: 1.3rem; margin-bottom: 6px; color: var(--slate-900);">Ujjawal Dubey</h3>
+          <p style="font-size: 0.9rem; color: var(--slate-600); margin-bottom: 16px;">
+            Leads MoSJE scheme rule engines, credit risk subvention algorithms, and hyper-local market intelligence mapping.
+          </p>
+          <span class="team-badge" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-gold-hover); border-color: rgba(245, 158, 11, 0.4);">
+            <i class="fa-solid fa-star"></i> Co-Lead
+          </span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Hackathon Impact Footer -->
+  <footer id="impact" class="gradient-bg-primary" style="padding: 50px 0 30px; margin-top: 40px;">
     <div class="section-container" style="color: white;">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 40px;">
         <div>
           <div class="team-badge" style="background: rgba(255,255,255,0.15); color: #fef08a; margin-bottom: 16px;">
-            SIH Problem Statement #91 | MoSJE
+            Ministry of Social Justice and Empowerment (MoSJE)
           </div>
-          <h3 style="font-size: 1.8rem; color: white; margin-bottom: 16px;">
+          <h3 style="font-size: 1.7rem; color: white; margin-bottom: 16px;">
             AI-Driven Hyper-Local Business Advisory & Financial Assistant
           </h3>
           <p style="color: #b2dfdb; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
@@ -592,7 +639,7 @@
           </h4>
           <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem;">
             <div><strong>Development Team:</strong> Code Catalyst</div>
-            <div><strong>Team Lead:</strong> Arnab Gayen</div>
+            <div><strong>Team Leads:</strong> Arnab Gayen & Ujjawal Dubey</div>
             <div><strong>Target Beneficiaries:</strong> SC, ST, OBC, Safai Karamchari & Women Rural Artisans</div>
             <div><strong>Key MoSJE Schemes:</strong> VISVAS, NSFDC Micro-Credit, NBCFDC New Swarnima, PM-DAKSH</div>
           </div>
@@ -600,7 +647,7 @@
       </div>
 
       <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 24px; text-align: center; font-size: 0.85rem; color: #b2dfdb;">
-        &copy; 2026 Team Code Catalyst (Lead: Arnab Gayen). Built for Ministry of Social Justice and Empowerment (MoSJE). All rights reserved.
+        &copy; 2026 Team Code Catalyst (Leads: Arnab Gayen & Ujjawal Dubey). Built for Ministry of Social Justice and Empowerment (MoSJE). All rights reserved.
       </div>
     </div>
   </footer>
