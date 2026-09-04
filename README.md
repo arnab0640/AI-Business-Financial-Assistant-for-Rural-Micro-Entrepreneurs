@@ -47,9 +47,21 @@
 ## 🛠️ Tech Stack
 
 - **Frontend:** HTML5, Modern ES6+ JavaScript, Custom CSS3 (Glassmorphism & SIH 2026 Saffron Gold Palette)
+- **Mobile & PWA Support:** Progressive Web App (PWA) with Manifest V3, Service Worker (`sw.js`), Apple Touch Icons for **iOS**, and Native Install Prompts for **Android & Windows**
 - **Data & Charts:** Chart.js, FontAwesome Icons
 - **Accessibility:** Web Speech API (Speech Recognition & Speech Synthesis)
 - **Deployment & Server:** Python HTTP Server
+
+---
+
+## 📱 Android & iOS App Support
+
+**SNU BizSathi** is built as an installable **Progressive Web App (PWA)** that runs natively on:
+- 🤖 **Android:** Tap browser 3-dot menu $\rightarrow$ "Install App" / "Add to Home Screen".
+- 🍎 **iOS (iPhone/iPad):** Open in Safari $\rightarrow$ Tap Share icon $\rightarrow$ "Add to Home Screen".
+- 💻 **Windows / macOS:** Click the address bar install icon $\rightarrow$ "Install App".
+
+Features include **offline caching** for remote rural areas with intermittent connectivity.
 
 ---
 

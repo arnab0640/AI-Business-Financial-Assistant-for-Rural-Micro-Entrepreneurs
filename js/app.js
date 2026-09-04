@@ -591,3 +591,73 @@ function renderTeam() {
     container.appendChild(card);
   });
 }
+
+/* ==========================================================================
+   PWA & Mobile (Android / iOS / Windows) Installation Logic
+   ========================================================================== */
+let deferredPWAInstallPrompt = null;
+
+// Service Worker Registration for Offline & Mobile PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then((reg) => {
+        console.log('[SNU BizSathi PWA] Service Worker registered successfully:', reg.scope);
+      })
+      .catch((err) => {
+        console.warn('[SNU BizSathi PWA] Service Worker registration failed:', err);
+      });
+  });
+}
+
+// Android / Chrome PWA Install Prompt Capture
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPWAInstallPrompt = e;
+  console.log('[SNU BizSathi PWA] Native install prompt captured');
+  
+  const installBox = document.getElementById('pwaNativeInstallBox');
+  if (installBox) {
+    installBox.style.display = 'block';
+  }
+});
+
+function openAppInstallModal() {
+  const modal = document.getElementById('appInstallModal');
+  if (modal) {
+    modal.style.display = 'flex';
+  }
+}
+
+function closeAppInstallModal() {
+  const modal = document.getElementById('appInstallModal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+}
+
+function triggerPWAInstall() {
+  if (deferredPWAInstallPrompt) {
+    executePWAInstall();
+  } else {
+    openAppInstallModal();
+  }
+}
+
+function executePWAInstall() {
+  if (deferredPWAInstallPrompt) {
+    deferredPWAInstallPrompt.prompt();
+    deferredPWAInstallPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('[SNU BizSathi PWA] User accepted PWA installation');
+      } else {
+        console.log('[SNU BizSathi PWA] User dismissed PWA installation');
+      }
+      deferredPWAInstallPrompt = null;
+      closeAppInstallModal();
+    });
+  } else {
+    openAppInstallModal();
+  }
+}
+

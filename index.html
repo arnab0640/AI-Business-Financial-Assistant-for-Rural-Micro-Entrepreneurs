@@ -6,6 +6,15 @@
   <title>SNU BizSathi - Sister Nivedita University | Smart India Hackathon 2026</title>
   <meta name="description" content="SNU BizSathi: AI-Driven Hyper-Local Business Advisory and Financial Structuring Assistant for Rural Micro-Entrepreneurs by Sister Nivedita University (SNU) Team Code Catalyst for MoSJE (Smart India Hackathon 2026).">
 
+  <!-- PWA & Mobile Web App Meta Tags (Android, iOS & Windows) -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f2042">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="SNU BizSathi">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="assets/icon-512.png">
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
@@ -28,6 +37,9 @@
         <span><i class="fa-solid fa-building-columns"></i> MoSJE</span>
       </div>
       <div style="display: flex; align-items: center; gap: 12px;">
+        <button onclick="openAppInstallModal()" class="team-badge" style="background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; cursor: pointer; padding: 4px 12px; font-weight: 700;">
+          <i class="fa-solid fa-mobile-screen-button"></i> Install Mobile App (Android / iOS)
+        </button>
         <span class="team-badge"><i class="fa-solid fa-users"></i> Team: Code Catalyst</span>
         <span class="team-badge" style="background: rgba(16, 185, 129, 0.2); border-color: #10b981; color: #34d399;" id="topLeadsBadge">
           <i class="fa-solid fa-user-gear"></i> Leader: Arnab Gayen | Co-Leader: Ujjawal Dubey
@@ -127,6 +139,11 @@
           <option value="gu">ગુજરાતી (Gujarati)</option>
           <option value="te">తెలుగు (Telugu)</option>
         </select>
+
+        <!-- Mobile & Desktop App Install Button -->
+        <button class="btn-primary" onclick="triggerPWAInstall()" style="padding: 8px 16px; font-size: 0.88rem; background: linear-gradient(135deg, #10b981, #059669); color: white;" title="Install SNU BizSathi App on Android, iOS, or Windows">
+          <i class="fa-solid fa-download"></i> <span class="hide-mobile">Install App</span>
+        </button>
 
         <!-- Audio Readout Button (Text-to-Speech Accessibility) -->
         <button class="icon-btn" id="ttsBtn" onclick="toggleAudioReadout()" title="Toggle Audio Readout for Rural Accessibility">
@@ -677,6 +694,77 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile (Android/iOS) & Desktop App Install Modal -->
+  <div id="appInstallModal" class="modal-overlay" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 9999; align-items: center; justify-content: center; padding: 20px;">
+    <div class="glass-card" style="background: white; color: #0f172a; max-width: 580px; width: 100%; border-radius: 20px; padding: 28px; box-shadow: 0 25px 60px rgba(0,0,0,0.4); border: 2px solid var(--accent-gold); max-height: 90vh; overflow-y: auto;">
+      
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 2px solid #f1f5f9; padding-bottom: 14px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <img src="assets/snu_bizsathi_logo.jpg" alt="Logo" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-600);">
+          <div>
+            <h3 style="font-size: 1.35rem; color: #0f2042; font-weight: 800; line-height: 1.2;">Install SNU BizSathi App</h3>
+            <p style="font-size: 0.8rem; color: #64748b; font-weight: 600;">Android • iOS • Windows • macOS</p>
+          </div>
+        </div>
+        <button onclick="closeAppInstallModal()" style="background: #f1f5f9; border: none; width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; color: #475569;">&times;</button>
+      </div>
+
+      <!-- Native Install Button Container -->
+      <div id="pwaNativeInstallBox" style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 16px; margin-bottom: 20px; text-align: center;">
+        <div style="font-weight: 700; color: #1e40af; margin-bottom: 8px;">
+          <i class="fa-solid fa-bolt text-amber-500"></i> Instant 1-Click App Installation
+        </div>
+        <button id="pwaInstallBtn" onclick="executePWAInstall()" class="btn-primary" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 12px 24px; font-weight: 800; font-size: 1rem; width: 100%;">
+          <i class="fa-solid fa-download"></i> Install App Now
+        </button>
+      </div>
+
+      <!-- Step by Step Guides for Platforms -->
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <!-- Android Guide -->
+        <div style="background: #f8fafc; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 14px;">
+          <div style="font-weight: 800; color: #1e3a8a; display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+            <i class="fa-brands fa-android text-emerald-600" style="font-size: 1.2rem;"></i> Android Setup (Google Chrome / Edge)
+          </div>
+          <ol style="margin-left: 20px; font-size: 0.88rem; color: #334155; line-height: 1.5;">
+            <li>Tap the browser menu (<strong>3 dots <i class="fa-solid fa-ellipsis-vertical"></i></strong> in top right).</li>
+            <li>Select <strong>"Install app"</strong> or <strong>"Add to Home screen"</strong>.</li>
+            <li>Confirm installation to add <strong>SNU BizSathi</strong> to your phone app drawer.</li>
+          </ol>
+        </div>
+
+        <!-- iOS Guide -->
+        <div style="background: #f8fafc; border-left: 4px solid #8b5cf6; border-radius: 8px; padding: 14px;">
+          <div style="font-weight: 800; color: #4c1d95; display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+            <i class="fa-brands fa-apple text-slate-800" style="font-size: 1.2rem;"></i> iOS Setup (iPhone & iPad Safari)
+          </div>
+          <ol style="margin-left: 20px; font-size: 0.88rem; color: #334155; line-height: 1.5;">
+            <li>Open this URL in <strong>Safari browser</strong>.</li>
+            <li>Tap the <strong>Share button <i class="fa-solid fa-arrow-up-from-bracket"></i></strong> at bottom menu.</li>
+            <li>Scroll down and select <strong>"Add to Home Screen" <i class="fa-regular fa-square-plus"></i></strong>.</li>
+          </ol>
+        </div>
+
+        <!-- Windows Guide -->
+        <div style="background: #f8fafc; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 14px;">
+          <div style="font-weight: 800; color: #78350f; display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+            <i class="fa-brands fa-windows text-blue-600" style="font-size: 1.2rem;"></i> Windows / macOS Desktop Setup
+          </div>
+          <p style="font-size: 0.88rem; color: #334155; line-height: 1.5; margin: 0;">
+            Click the <strong>Install Icon <i class="fa-solid fa-laptop-medical"></i></strong> in your browser address bar or menu to install as a standalone desktop application.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; text-align: center;">
+        <button onclick="closeAppInstallModal()" class="btn-secondary" style="padding: 10px 24px; font-size: 0.9rem;">
+          Close Guide
+        </button>
+      </div>
+
+    </div>
+  </div>
 
   <!-- Main Application JavaScript -->
   <script src="js/data.js"></script>
