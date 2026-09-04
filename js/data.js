@@ -1,5 +1,6 @@
 /**
- * AI-Driven Hyper-Local Business Advisory & Financial Structuring Assistant
+ * SNU BizSathi - AI-Driven Hyper-Local Business Advisory & Financial Structuring Assistant
+ * Sister Nivedita University (SNU) | Smart India Hackathon Entry
  * Data store for MoSJE Schemes, Indian Geographic Data, Sector Demand Matrices,
  * Multi-lingual Translations, and AI Advisory Knowledge Base.
  * 
@@ -11,7 +12,8 @@
 
 const APP_DATA = {
   meta: {
-    title: "GrameenVikas AI - MoSJE Micro-Entrepreneur Advisory Platform",
+    title: "SNU BizSathi - AI-Driven Hyper-Local Business Advisory & Financial Assistant",
+    university: "Sister Nivedita University (SNU)",
     problemStatement: "AI-Driven Hyper-Local Business Advisory and Financial Structuring Assistant",
     organization: "Ministry of Social Justice and Empowerment (MoSJE)",
     team: "Code Catalyst",
@@ -23,10 +25,10 @@ const APP_DATA = {
   // Multi-lingual dictionary
   translations: {
     en: {
-      navTitle: "GrameenVikas AI",
+      navTitle: "SNU BizSathi",
       teamBadge: "Team Code Catalyst",
       leadBadge: "Leader: Arnab Gayen | Co-Leader: Ujjawal Dubey",
-      tagline: "Empowering Rural Micro-Entrepreneurs with AI & MoSJE Schemes",
+      tagline: "Sister Nivedita University • Empowering Rural Micro-Entrepreneurs",
       navHome: "Advisory Copilot",
       navDemand: "Market Demand Predictor",
       navSchemes: "Scheme Matcher",
@@ -35,7 +37,7 @@ const APP_DATA = {
       navTeam: "Team & Leadership",
       navImpact: "Project Impact",
       heroTitle: "AI Business & Financial Assistant for Rural Micro-Entrepreneurs",
-      heroSubtitle: "Get hyper-local business advice, match with MoSJE schemes (VISVAS, NSFDC, NBCFDC), project cash flows, and generate bankable project reports in 7 regional languages.",
+      heroSubtitle: "SNU BizSathi provides hyper-local business advice, matches with MoSJE schemes (VISVAS, NSFDC, NBCFDC), projects cash flows, and generates bankable project reports in 7 regional languages.",
       btnStartCopilot: "Talk to AI Copilot",
       btnCalculateLoan: "Match Financial Schemes",
       btnDpr: "Generate Bankable DPR",
@@ -61,10 +63,10 @@ const APP_DATA = {
       stopAudio: "Stop Audio"
     },
     hi: {
-      navTitle: "ग्रामीण विकास एआई",
+      navTitle: "SNU बिजसाथी (SNU BizSathi)",
       teamBadge: "टीम कोड उत्प्रेरक (Code Catalyst)",
       leadBadge: "लीडर: अर्णब गायेन | सह-लीडर: उज्ज्वल दुबे",
-      tagline: "एआई और सामाजिक न्याय मंत्रालय योजनाओं से ग्रामीण सूक्ष्म-उद्यमियों का सशक्तिकरण",
+      tagline: "सिस्टर निवेदिता यूनिवर्सिटी • ग्रामीण सूक्ष्म-उद्यमियों का सशक्तिकरण",
       navHome: "सलाहकार कोपायलट",
       navDemand: "बाजार मांग अनुमानक",
       navSchemes: "योजना मिलान",
@@ -84,7 +86,7 @@ const APP_DATA = {
       competitionScore: "प्रतिस्पर्धा घनत्व",
       profitMargin: "औसत लाभ मार्जिन",
       rawMaterialScore: "कच्चे माल की उपलब्धता",
-      aiCopilotHeader: "1. ग्रामीण विकास एआई कोपायलट",
+      aiCopilotHeader: "1. SNU बिजसाथी एआई कोपायलट",
       aiCopilotSub: "7 भाषाओं में आवाज़ और पाठ सलाह",
       quickPromptsTitle: "त्वरित सलाह प्रश्न:",
       schemeMatchHeader: "3. MoSJE एवं सरकारी योजना योग्यता मिलानकर्ता",
@@ -99,10 +101,10 @@ const APP_DATA = {
       stopAudio: "ऑडियो रोकें"
     },
     bn: {
-      navTitle: "গ্রামীণ বিকাশ AI",
+      navTitle: "SNU BizSathi (বিিজসাথী)",
       teamBadge: "টিম কোড ক্যাটালিস্ট (Code Catalyst)",
       leadBadge: "লিডার: অর্ণব গায়েন | কো-লিডার: উজ্জ্বল দুবে",
-      tagline: "AI এবং সামাজিক ন্যায় ও ক্ষমতায়ন মন্ত্রক প্রকল্পের মাধ্যমে গ্রামীণ উদ্যোক্তাদের সহায়তা",
+      tagline: "সিস্টার নিবেদিতা ইউনিভার্সিটি • গ্রামীণ উদ্যোক্তাদের সহায়তা",
       navHome: "পরামর্শক কো-পাইলট",
       navDemand: "বাজার চাহিদা পূর্বাভাস",
       navSchemes: "প্রকল্প মিলকরণ",
@@ -122,7 +124,7 @@ const APP_DATA = {
       competitionScore: "প্রতিযোগিতার ঘনত্ব",
       profitMargin: "গড় লাভ শতাংশ",
       rawMaterialScore: "কাঁচামালের সহজলভ্যতা",
-      aiCopilotHeader: "১. গ্রামীণ বিকাশ AI কো-পাইলট",
+      aiCopilotHeader: "১. SNU বিজসাথী AI কো-পাইলট",
       aiCopilotSub: "৭টি ভাষায় ভয়েস ও টেক্সট পরামর্শ",
       quickPromptsTitle: "দ্রুত পরামর্শ প্রশ্নাবলী:",
       schemeMatchHeader: "৩. MoSJE ও সরকারি প্রকল্প যোগ্যতা যাচাই",
@@ -137,10 +139,10 @@ const APP_DATA = {
       stopAudio: "অডিও বন্ধ করুন"
     },
     ta: {
-      navTitle: "கிராமின் விகாஸ் AI",
+      navTitle: "SNU BizSathi",
       teamBadge: "டீம் கோட் கேட்டலிஸ்ட்",
       leadBadge: "தலைவர்: அர்னப் காயென் | இணை தலைவர்: உஜ்ஜவல் துபே",
-      tagline: "AI மற்றும் MoSJE திட்டங்கள் மூலம் கிராமப்புற நுண் தொழில்முனைவோர் மேம்பாடு",
+      tagline: "சிஸ்டர் நிவேதிதா பல்கலைக்கழகம் • கிராமப்புற நுண் தொழில்முனைவோர் மேம்பாடு",
       navHome: "ஆலோசகர் கோபைலட்",
       navDemand: "சந்தை தேவை கணிப்பு",
       navSchemes: "திட்ட பொருத்தம்",
@@ -160,7 +162,7 @@ const APP_DATA = {
       competitionScore: "போட்டி அடர்த்தி",
       profitMargin: "சராசரி லாப வரம்பு",
       rawMaterialScore: "மூலப்பொருள் கிடைக்கும்தன்மை",
-      aiCopilotHeader: "1. கிராமின் விகாஸ் AI கோபைலட்",
+      aiCopilotHeader: "1. SNU BizSathi AI கோபைலட்",
       aiCopilotSub: "7 மொழிகளில் குரல் & உரை ஆலோசனை",
       quickPromptsTitle: "விரைவு ஆலோசனைகள்:",
       schemeMatchHeader: "3. MoSJE & அரசு திட்ட தகுதி பொருத்தம்",
@@ -175,10 +177,10 @@ const APP_DATA = {
       stopAudio: "ஆடியோவை நிறுத்து"
     },
     mr: {
-      navTitle: "ग्रामीण विकास AI",
+      navTitle: "SNU BizSathi",
       teamBadge: "टीम कोड कॅटॅलिस्ट",
       leadBadge: "लीडर: अर्णब गायेन | सह-लीडर: उज्ज्वल दुबे",
-      tagline: "AI आणि MoSJE योजनांद्वारे ग्रामीण सूक्ष्म उद्योजकांचे सबलीकरण",
+      tagline: "सिस्टर निवेदिता युनिव्हर्सिटी • ग्रामीण सूक्ष्म उद्योजकांचे सबलीकरण",
       navHome: "सल्लागार कोपायलट",
       navDemand: "बाजार मागणी अंदाज",
       navSchemes: "योजना जुळवणी",
@@ -198,7 +200,7 @@ const APP_DATA = {
       competitionScore: "स्पर्धा घनता",
       profitMargin: "सरासरी नफा मार्जिन",
       rawMaterialScore: "कच्चा माल उपलब्धता",
-      aiCopilotHeader: "1. ग्रामीण विकास AI कोपायलट",
+      aiCopilotHeader: "1. SNU BizSathi AI कोपायलट",
       aiCopilotSub: "7 भाषांमध्ये आवाज आणि मजकूर सल्ला",
       quickPromptsTitle: "त्वरित प्रश्न:",
       schemeMatchHeader: "3. MoSJE योजना पात्रता जुळवणी",
@@ -213,10 +215,10 @@ const APP_DATA = {
       stopAudio: "ऑडिओ थांबवा"
     },
     gu: {
-      navTitle: "ગ્રામીણ વિકાસ AI",
+      navTitle: "SNU BizSathi",
       teamBadge: "ટીમ કોડ કૅટેલિસ્ટ",
       leadBadge: "લીડર: અર્ણબ ગાંગુલી / ગાયન | કો-લીડર: ઉજ્જવલ દુબે",
-      tagline: "AI અને MoSJE યોજનાઓ વડે ગ્રામીણ સૂક્ષ્મ સાહસિકોનું સશક્તિકરણ",
+      tagline: "સિસ્ટર નિવેદિતા યુનિવર્સિટી • ગ્રામીણ સૂક્ષ્મ સાહસિકોનું સશક્તિકરણ",
       navHome: "સલાહકાર કોપાયલટ",
       navDemand: "બજાર માંગ અનુમાન",
       navSchemes: "યોજના મેચ",
@@ -236,7 +238,7 @@ const APP_DATA = {
       competitionScore: "સ્પર્ધા ઘનતા",
       profitMargin: "સરેરાશ નફાનું માર્જિન",
       rawMaterialScore: "કાચા માલની સરળતા",
-      aiCopilotHeader: "1. ગ્રામીણ વિકાસ AI કોપાયલટ",
+      aiCopilotHeader: "1. SNU BizSathi AI કોપાયલટ",
       aiCopilotSub: "7 ભાષાઓમાં વૉઇસ અને ટેક્સ્ટ સલાહ",
       quickPromptsTitle: "ઝડપી પ્રશ્નો:",
       schemeMatchHeader: "3. MoSJE અને સરકારી યોજના પાત્રતા",
@@ -251,10 +253,10 @@ const APP_DATA = {
       stopAudio: "ઑડિઓ બંધ કરો"
     },
     te: {
-      navTitle: "గ్రామీణ వికాస్ AI",
+      navTitle: "SNU BizSathi",
       teamBadge: "టీమ్ కోడ్ క్యాటలిస్ట్",
       leadBadge: "లీడర్: అర్నబ్ గాయేన్ | కో-లీడర్: ఉజ్జవల్ దూబే",
-      tagline: "AI మరియు MoSJE పథకాల ద్వారా గ్రామీణ సూక్ష్మ పారిశ్రామికవేత్తల సాధికారత",
+      tagline: "సిస్టర్ నివేదిత యూనివర్సిటీ • గ్రామీణ సూక్ష్మ పారిశ్రామికవేత్తల సాధికారత",
       navHome: "సలహాదారు కోపైలట్",
       navDemand: "మార్కెట్ డిమాండ్ అంచనా",
       navSchemes: "పథకం సరిపోలిక",
@@ -274,7 +276,7 @@ const APP_DATA = {
       competitionScore: "పోటీ సాంద్రత",
       profitMargin: "సగటు లాభ పరిమితి",
       rawMaterialScore: "ముడి సరుకుల లభ్యత",
-      aiCopilotHeader: "1. గ్రామీణ వికాస్ AI కోపైలట్",
+      aiCopilotHeader: "1. SNU BizSathi AI కోపైలట్",
       aiCopilotSub: "7 భాషల్లో వాయిస్ & టెక్స్ట్ సలహా",
       quickPromptsTitle: "త్వరిత సలహా ప్రశ్నలు:",
       schemeMatchHeader: "3. MoSJE మరియు ప్రభుత్వ పథకాల అర్హత",

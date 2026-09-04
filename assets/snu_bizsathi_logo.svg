@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="snuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2042"/>
+      <stop offset="50%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#004d40"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Double Circle Border -->
+  <circle cx="250" cy="250" r="238" stroke="#1e3a8a" stroke-width="6" fill="#ffffff"/>
+  <circle cx="250" cy="250" r="230" stroke="#1e3a8a" stroke-width="2" fill="none"/>
+
+  <!-- Top Curved Text: SISTER NIVEDITA UNIVERSITY -->
+  <path id="textArcTop" d="M 55,250 A 195,195 0 1,1 445,250" fill="none"/>
+  <text font-family="'Outfit', sans-serif" font-weight="900" font-size="22" fill="#0f2042" letter-spacing="3">
+    <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">SISTER NIVEDITA UNIVERSITY</textPath>
+  </text>
+
+  <!-- Center Top Inner SNU Emblem Seal -->
+  <circle cx="250" cy="115" r="48" fill="#fef08a" stroke="#1e3a8a" stroke-width="3"/>
+  <circle cx="250" cy="115" r="44" stroke="#1e3a8a" stroke-width="1" fill="none" stroke-dasharray="3,2"/>
+  <!-- SNU Monogram -->
+  <text x="250" y="102" font-family="serif" font-weight="900" font-size="18" fill="#78350f" text-anchor="middle">SNU</text>
+  <path d="M 235,112 C 235,130 265,130 265,112" stroke="#78350f" stroke-width="2" fill="none"/>
+  <text x="250" y="132" font-family="'Plus Jakarta Sans', sans-serif" font-size="5" font-weight="700" fill="#1e3a8a" text-anchor="middle">DISCIPLINE • INNOVATION • EMPOWERMENT</text>
+
+  <!-- Left: Rural Micro-Entrepreneur Agriculture & Green Growth -->
+  <g transform="translate(65, 145)">
+    <!-- Sun & Green Hills -->
+    <path d="M 10,120 Q 50,80 110,115 L 110,140 L 10,140 Z" fill="#22c55e" opacity="0.8"/>
+    <path d="M 0,140 Q 60,105 130,135 L 130,150 L 0,150 Z" fill="#15803d"/>
+    <!-- House & Tree -->
+    <polygon points="40,105 25,120 55,120" fill="#b45309"/>
+    <rect x="30" y="120" width="20" height="18" fill="#1e293b"/>
+    <circle cx="85" cy="100" r="14" fill="#16a34a"/>
+    <rect x="83" y="114" width="4" height="12" fill="#78350f"/>
+    <!-- Growth Arrow -->
+    <path d="M 60,95 Q 85,70 110,55" stroke="#16a34a" stroke-width="4" fill="none"/>
+    <polygon points="110,50 115,62 103,60" fill="#16a34a"/>
+    <!-- Farmers Shaking Hands -->
+    <circle cx="80" cy="120" r="5" fill="#1e293b"/>
+    <circle cx="98" cy="120" r="5" fill="#1e293b"/>
+    <path d="M 75,135 L 80,125 L 88,130 L 98,125 L 103,135" stroke="#1e293b" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Right: AI Brain & Technology Circuit -->
+  <g transform="translate(305, 140)">
+    <path d="M 70,30 C 40,30 20,50 20,80 C 20,105 35,120 45,130 L 75,130 C 85,115 95,95 95,75 C 95,50 85,30 70,30 Z" fill="none" stroke="#1e3a8a" stroke-width="3"/>
+    <!-- AI Microchip -->
+    <rect x="45" y="60" width="35" height="35" rx="6" fill="#1e3a8a"/>
+    <text x="62.5" y="83" font-family="'Outfit', sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">AI</text>
+    <!-- Circuit Lines -->
+    <line x1="62.5" y1="40" x2="62.5" y2="60" stroke="#1e3a8a" stroke-width="2"/>
+    <line x1="62.5" y1="95" x2="62.5" y2="115" stroke="#1e3a8a" stroke-width="2"/>
+    <line x1="25" y1="77.5" x2="45" y2="77.5" stroke="#1e3a8a" stroke-width="2"/>
+    <line x1="80" y1="77.5" x2="100" y2="77.5" stroke="#1e3a8a" stroke-width="2"/>
+    <circle cx="62.5" cy="38" r="3" fill="#1e3a8a"/>
+    <circle cx="102" cy="77.5" r="3" fill="#1e3a8a"/>
+  </g>
+
+  <!-- Center Rupee Symbol in Hands Circle -->
+  <circle cx="250" cy="275" r="34" fill="#ffffff" stroke="#1e3a8a" stroke-width="3"/>
+  <path d="M 234,260 L 266,260 M 234,268 L 266,268 M 244,260 C 265,260 265,280 244,280 L 238,280 L 260,298" stroke="#1e3a8a" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Main Brand Title: SNU BizSathi -->
+  <text x="250" y="348" font-family="'Outfit', sans-serif" font-weight="900" font-size="44" fill="#0f2042" text-anchor="middle" letter-spacing="-1">
+    SNU <tspan fill="#15803d">BizSathi</tspan>
+  </text>
+
+  <!-- Tagline Banner -->
+  <rect x="70" y="360" width="360" height="24" rx="12" fill="#0f2042"/>
+  <text x="250" y="376" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="9" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
+    AI-DRIVEN HYPER-LOCAL BUSINESS ADVISORY &amp; FINANCIAL ASSISTANT
+  </text>
+  <text x="250" y="394" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="10" fill="#0f2042" text-anchor="middle" letter-spacing="1">
+    FOR RURAL MICRO-ENTREPRENEURS
+  </text>
+
+  <!-- CODE CATALYST TEAM Ribbon -->
+  <g transform="translate(100, 404)">
+    <polygon points="0,0 300,0 290,26 300,52 0,52 10,26" fill="#1e3a8a"/>
+    <text x="150" y="24" font-family="'Outfit', sans-serif" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle" letter-spacing="2">
+      CODE CATALYST
+    </text>
+    <text x="150" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="11" fill="#fef08a" text-anchor="middle" letter-spacing="3">
+      TEAM
+    </text>
+  </g>
+
+  <!-- Bottom Curved Text: SMART INDIA HACKATHON -->
+  <path id="textArcBottom" d="M 80,420 A 200,200 0 0,0 420,420" fill="none"/>
+  <text font-family="'Outfit', sans-serif" font-weight="900" font-size="16" fill="#0f2042" letter-spacing="2">
+    <textPath href="#textArcBottom" startOffset="50%" text-anchor="middle">SMART INDIA HACKATHON</textPath>
+  </text>
+</svg>
