@@ -4,7 +4,7 @@
  * Multi-lingual Translations, and AI Advisory Knowledge Base.
  * 
  * Team: Code Catalyst
- * Co-Leads: Arnab Gayen & Ujjawal Dubey
+ * Team Leader: Arnab Gayen | Co-Leader: Ujjawal Dubey
  * Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit
  * Ministry of Social Justice and Empowerment (MoSJE)
  */
@@ -15,7 +15,8 @@ const APP_DATA = {
     problemStatement: "AI-Driven Hyper-Local Business Advisory and Financial Structuring Assistant",
     organization: "Ministry of Social Justice and Empowerment (MoSJE)",
     team: "Code Catalyst",
-    leads: ["Arnab Gayen", "Ujjawal Dubey"],
+    leader: "Arnab Gayen",
+    coLeader: "Ujjawal Dubey",
     members: ["Arnab Gayen", "Ujjawal Dubey", "Sanjana Kumari Balmiki", "Sreeja Maity", "Yash Raj", "Vinit"]
   },
 
@@ -24,7 +25,7 @@ const APP_DATA = {
     en: {
       navTitle: "GrameenVikas AI",
       teamBadge: "Team Code Catalyst",
-      leadBadge: "Leads: Arnab Gayen & Ujjawal Dubey",
+      leadBadge: "Leader: Arnab Gayen | Co-Leader: Ujjawal Dubey",
       tagline: "Empowering Rural Micro-Entrepreneurs with AI & MoSJE Schemes",
       navHome: "Advisory Copilot",
       navDemand: "Market Demand Predictor",
@@ -62,7 +63,7 @@ const APP_DATA = {
     hi: {
       navTitle: "ग्रामीण विकास एआई",
       teamBadge: "टीम कोड उत्प्रेरक (Code Catalyst)",
-      leadBadge: "नेतृत्व: अर्णब गायेन एवं उज्ज्वल दुबे",
+      leadBadge: "लीडर: अर्णब गायेन | सह-लीडर: उज्ज्वल दुबे",
       tagline: "एआई और सामाजिक न्याय मंत्रालय योजनाओं से ग्रामीण सूक्ष्म-उद्यमियों का सशक्तिकरण",
       navHome: "सलाहकार कोपायलट",
       navDemand: "बाजार मांग अनुमानक",
@@ -100,7 +101,7 @@ const APP_DATA = {
     bn: {
       navTitle: "গ্রামীণ বিকাশ AI",
       teamBadge: "টিম কোড ক্যাটালিস্ট (Code Catalyst)",
-      leadBadge: "নেতৃত্ব: অর্ণব গায়েন এবং উজ্জ্বল দুবে",
+      leadBadge: "লিডার: অর্ণব গায়েন | কো-লিডার: উজ্জ্বল দুবে",
       tagline: "AI এবং সামাজিক ন্যায় ও ক্ষমতায়ন মন্ত্রক প্রকল্পের মাধ্যমে গ্রামীণ উদ্যোক্তাদের সহায়তা",
       navHome: "পরামর্শক কো-পাইলট",
       navDemand: "বাজার চাহিদা পূর্বাভাস",
@@ -138,7 +139,7 @@ const APP_DATA = {
     ta: {
       navTitle: "கிராமின் விகாஸ் AI",
       teamBadge: "டீம் கோட் கேட்டலிஸ்ட்",
-      leadBadge: "தலைவர்கள்: அர்னப் காயென் & உஜ்ஜவல் துபே",
+      leadBadge: "தலைவர்: அர்னப் காயென் | இணை தலைவர்: உஜ்ஜவல் துபே",
       tagline: "AI மற்றும் MoSJE திட்டங்கள் மூலம் கிராமப்புற நுண் தொழில்முனைவோர் மேம்பாடு",
       navHome: "ஆலோசகர் கோபைலட்",
       navDemand: "சந்தை தேவை கணிப்பு",
@@ -176,7 +177,7 @@ const APP_DATA = {
     mr: {
       navTitle: "ग्रामीण विकास AI",
       teamBadge: "टीम कोड कॅटॅलिस्ट",
-      leadBadge: "प्रमुख: अर्णब गायेन आणि उज्ज्वल दुबे",
+      leadBadge: "लीडर: अर्णब गायेन | सह-लीडर: उज्ज्वल दुबे",
       tagline: "AI आणि MoSJE योजनांद्वारे ग्रामीण सूक्ष्म उद्योजकांचे सबलीकरण",
       navHome: "सल्लागार कोपायलट",
       navDemand: "बाजार मागणी अंदाज",
@@ -214,7 +215,7 @@ const APP_DATA = {
     gu: {
       navTitle: "ગ્રામીણ વિકાસ AI",
       teamBadge: "ટીમ કોડ કૅટેલિસ્ટ",
-      leadBadge: "લીડ્સ: અર્ણબ ગાંગુલી / ગાયન અને ઉજ્જવલ દુબે",
+      leadBadge: "લીડર: અર્ણબ ગાંગુલી / ગાયન | કો-લીડર: ઉજ્જવલ દુબે",
       tagline: "AI અને MoSJE યોજનાઓ વડે ગ્રામીણ સૂક્ષ્મ સાહસિકોનું સશક્તિકરણ",
       navHome: "સલાહકાર કોપાયલટ",
       navDemand: "બજાર માંગ અનુમાન",
@@ -252,7 +253,7 @@ const APP_DATA = {
     te: {
       navTitle: "గ్రామీణ వికాస్ AI",
       teamBadge: "టీమ్ కోడ్ క్యాటలిస్ట్",
-      leadBadge: "లీడ్స్: అర్నబ్ గాయేన్ & ఉజ్జవల్ దూబే",
+      leadBadge: "లీడర్: అర్నబ్ గాయేన్ | కో-లీడర్: ఉజ్జవల్ దూబే",
       tagline: "AI మరియు MoSJE పథకాల ద్వారా గ్రామీణ సూక్ష్మ పారిశ్రామికవేత్తల సాధికారత",
       navHome: "సలహాదారు కోపైలట్",
       navDemand: "మార్కెట్ డిమాండ్ అంచనా",
@@ -289,23 +290,23 @@ const APP_DATA = {
     }
   },
 
-  // All 6 Team Members Data
+  // All 6 Team Members Data (Arnab = Leader, Ujjawal = Co-Leader)
   teamMembers: [
     {
       name: "Arnab Gayen",
-      role: "Team Lead & Full Stack Architect",
+      role: "Team Leader & Full Stack Architect",
       avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-emerald-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
-      bio: "Leads product architecture, AI advisory logic integration, and financial projection engineering for rural micro-entrepreneurship.",
-      tag: "Co-Lead",
-      isLead: true
+      bio: "Team Leader. Leads product architecture, AI advisory logic integration, and financial projection engineering for rural micro-entrepreneurship.",
+      tag: "Team Leader",
+      roleType: "leader"
     },
     {
       name: "Ujjawal Dubey",
-      role: "Team Lead & AI Financial Engineer",
+      role: "Co-Leader & AI Financial Engineer",
       avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-amber-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
-      bio: "Leads MoSJE scheme rule engines, credit risk subvention algorithms, and hyper-local market intelligence mapping.",
-      tag: "Co-Lead",
-      isLead: true
+      bio: "Co-Leader. Leads MoSJE scheme rule engines, credit risk subvention algorithms, and hyper-local market intelligence mapping.",
+      tag: "Co-Leader",
+      roleType: "co-leader"
     },
     {
       name: "Sanjana Kumari Balmiki",
@@ -313,7 +314,7 @@ const APP_DATA = {
       avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-purple-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
       bio: "Specializes in MoSJE demographic targeting (SC/OBC/Safai Karamchari), field data research, and social impact metrics.",
       tag: "Team Member",
-      isLead: false
+      roleType: "member"
     },
     {
       name: "Sreeja Maity",
@@ -321,7 +322,7 @@ const APP_DATA = {
       avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-blue-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
       bio: "Designs accessible multi-lingual interfaces, glassmorphism layouts, and voice/audio readout user experience for rural users.",
       tag: "Team Member",
-      isLead: false
+      roleType: "member"
     },
     {
       name: "Yash Raj",
@@ -329,7 +330,7 @@ const APP_DATA = {
       avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-teal-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
       bio: "Engineers scheme eligibility matching logic, loan interest subvention calculators, and Detailed Project Report (DPR) data pipelines.",
       tag: "Team Member",
-      isLead: false
+      roleType: "member"
     },
     {
       name: "Vinit",
@@ -337,7 +338,7 @@ const APP_DATA = {
       avatarSvg: `<svg viewBox="0 0 100 100" class="w-full h-full text-indigo-600 fill-current"><circle cx="50" cy="35" r="22"/><path d="M20 90 C20 65 35 55 50 55 C65 55 80 65 80 90 Z"/></svg>`,
       bio: "Conducts hyper-local sector demand validation, market buyer linkage verification, and system end-to-end testing.",
       tag: "Team Member",
-      isLead: false
+      roleType: "member"
     }
   ],
 

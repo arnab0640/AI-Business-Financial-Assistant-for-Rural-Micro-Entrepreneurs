@@ -2,7 +2,7 @@
  * GrameenVikas AI - MoSJE Micro-Entrepreneur Advisory Platform
  * Smart India Hackathon 2026 Presentation Edition
  * Team: Code Catalyst
- * Co-Leads: Arnab Gayen & Ujjawal Dubey
+ * Team Leader: Arnab Gayen | Co-Leader: Ujjawal Dubey
  * Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit
  */
 
@@ -553,15 +553,30 @@ function renderTeam() {
 
   APP_DATA.teamMembers.forEach(member => {
     const card = document.createElement('div');
-    card.className = `glass-card team-card ${member.isLead ? 'lead-card' : ''}`;
+    const isLeader = member.roleType === 'leader';
+    const isCoLeader = member.roleType === 'co-leader';
 
-    const pillStyle = member.isLead ? '' : 'background: linear-gradient(135deg, #0284c7, #0ea5e9);';
-    const badgeStyle = member.isLead 
-      ? 'background: rgba(16, 185, 129, 0.15); color: var(--emerald-600); border-color: rgba(16, 185, 129, 0.4);' 
-      : 'background: rgba(14, 165, 233, 0.15); color: #0284c7; border-color: rgba(14, 165, 233, 0.4);';
+    card.className = `glass-card team-card ${isLeader || isCoLeader ? 'lead-card' : ''}`;
+
+    let pillStyle = 'background: linear-gradient(135deg, #0284c7, #0ea5e9);';
+    let badgeStyle = 'background: rgba(14, 165, 233, 0.15); color: #0284c7; border-color: rgba(14, 165, 233, 0.4);';
+    let avatarBorder = '#0284c7';
+    let iconClass = 'fa-user-check';
+
+    if (isLeader) {
+      pillStyle = 'background: linear-gradient(135deg, #d97706, #f59e0b);';
+      badgeStyle = 'background: rgba(245, 158, 11, 0.2); color: #d97706; border-color: rgba(245, 158, 11, 0.5); font-weight: 800;';
+      avatarBorder = 'var(--accent-gold)';
+      iconClass = 'fa-crown';
+    } else if (isCoLeader) {
+      pillStyle = 'background: linear-gradient(135deg, #059669, #10b981);';
+      badgeStyle = 'background: rgba(16, 185, 129, 0.2); color: #059669; border-color: rgba(16, 185, 129, 0.5); font-weight: 800;';
+      avatarBorder = 'var(--emerald-600)';
+      iconClass = 'fa-star';
+    }
 
     card.innerHTML = `
-      <div class="team-avatar" style="${member.isLead ? 'border-color: var(--accent-gold);' : 'border-color: #0284c7;'}">
+      <div class="team-avatar" style="border-color: ${avatarBorder};">
         ${member.avatarSvg}
       </div>
       <span class="team-role-pill" style="${pillStyle}">${member.role}</span>
@@ -570,7 +585,7 @@ function renderTeam() {
         ${member.bio}
       </p>
       <span class="team-badge" style="${badgeStyle}">
-        <i class="fa-solid ${member.isLead ? 'fa-crown' : 'fa-user-check'}"></i> ${member.tag}
+        <i class="fa-solid ${iconClass}"></i> ${member.tag}
       </span>
     `;
     container.appendChild(card);

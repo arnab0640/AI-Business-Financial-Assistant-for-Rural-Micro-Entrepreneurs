@@ -3,7 +3,8 @@
 ![SIH 2026](https://img.shields.io/badge/SIH-2026%20Official%20Entry-ff6f00?style=for-the-badge)
 ![Ministry](https://img.shields.io/badge/Ministry-MoSJE-004d40?style=for-the-badge)
 ![Team](https://img.shields.io/badge/Team-Code%20Catalyst-f59e0b?style=for-the-badge)
-![Team Leads](https://img.shields.io/badge/Co--Leads-Arnab%20Gayen%20%26%20Ujjawal%20Dubey-10b981?style=for-the-badge)
+![Team Leader](https://img.shields.io/badge/Leader-Arnab%20Gayen-10b981?style=for-the-badge)
+![Co-Leader](https://img.shields.io/badge/Co--Leader-Ujjawal%20Dubey-0284c7?style=for-the-badge)
 
 ---
 
@@ -14,9 +15,9 @@
 
 ## 👨‍💻 Team Code Catalyst Roster (6 Members)
 
-### 🌟 Co-Leads
-1. **Arnab Gayen** – *Team Lead & Full Stack Architect*
-2. **Ujjawal Dubey** – *Team Lead & AI Financial Engineer*
+### 👑 Team Leadership
+1. **Arnab Gayen** – *Team Leader & Full Stack Architect*
+2. **Ujjawal Dubey** – *Co-Leader & AI Financial Engineer*
 
 ### 👥 Team Members
 3. **Sanjana Kumari Balmiki** – *Data & Social Inclusion Specialist*
