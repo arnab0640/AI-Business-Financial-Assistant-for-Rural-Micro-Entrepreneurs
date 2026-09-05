@@ -26,6 +26,131 @@
 </head>
 <body>
 
+  <!-- FULL SCREEN DYNAMIC LOGIN PORTAL OVERLAY -->
+  <div id="authOverlay" class="auth-overlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="auth-backdrop"></div>
+    <div class="auth-glow-orb orb-1"></div>
+    <div class="auth-glow-orb orb-2"></div>
+    
+    <div class="auth-card">
+      <!-- Portal Top Header & Badges -->
+      <div class="auth-card-header">
+        <div class="auth-badges-row">
+          <span class="auth-pill-snu"><i class="fa-solid fa-graduation-cap"></i> Sister Nivedita University</span>
+          <span class="auth-pill-sih"><i class="fa-solid fa-trophy"></i> SIH 2026 Entry</span>
+        </div>
+
+        <div class="auth-emblem-wrap">
+          <img src="assets/snu_bizsathi_logo.jpg" onerror="this.src='assets/snu_bizsathi_logo.svg'" alt="SNU BizSathi Official Emblem" class="auth-emblem-img">
+          <div class="auth-emblem-ring"></div>
+        </div>
+
+        <h1 class="auth-title" id="authTitle">
+          SNU <span class="text-accent-green">BizSathi</span>
+        </h1>
+        <p class="auth-subtitle">AI-Driven Business Advisory & Financial Structuring Portal</p>
+        <div class="auth-dept-tag">
+          <i class="fa-solid fa-building-columns"></i> Ministry of Social Justice &amp; Empowerment (MoSJE)
+        </div>
+      </div>
+
+      <!-- Quick Demo Credentials Box -->
+      <div class="auth-demo-box">
+        <div class="auth-demo-text">
+          <span class="demo-icon"><i class="fa-solid fa-key"></i></span>
+          <div>
+            <div class="demo-heading">Authorized Portal Credentials</div>
+            <div class="demo-creds">
+              Login ID: <code id="demoIdText">code catalyst</code> &bull; Password: <code id="demoPassText">1234</code>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn-demo-autofill" onclick="fillDemoCredentials()" title="Click to auto-fill credentials">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-fill
+        </button>
+      </div>
+
+      <!-- Form -->
+      <form id="authLoginForm" class="auth-form" onsubmit="handleLogin(event)">
+        <!-- Alert Notification Box -->
+        <div id="loginAlert" class="login-alert" role="alert" style="display: none;"></div>
+
+        <!-- User ID Input -->
+        <div class="form-group">
+          <label for="loginUserId" class="auth-label">
+            <i class="fa-solid fa-user-shield"></i> Portal User ID
+          </label>
+          <div class="auth-input-wrap">
+            <i class="fa-solid fa-id-badge input-leading-icon"></i>
+            <input 
+              type="text" 
+              id="loginUserId" 
+              class="auth-input" 
+              placeholder="Enter User ID (e.g. code catalyst)" 
+              autocomplete="username" 
+              required
+              oninput="this.classList.remove('input-error')"
+            >
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-group">
+          <div class="label-with-meta">
+            <label for="loginPassword" class="auth-label">
+              <i class="fa-solid fa-lock"></i> Security Passcode
+            </label>
+            <span class="auth-security-hint"><i class="fa-solid fa-shield-halved"></i> 256-Bit Encrypted</span>
+          </div>
+          <div class="auth-input-wrap">
+            <i class="fa-solid fa-key input-leading-icon"></i>
+            <input 
+              type="password" 
+              id="loginPassword" 
+              class="auth-input" 
+              placeholder="Enter Passcode (e.g. 1234)" 
+              autocomplete="current-password" 
+              required
+              oninput="this.classList.remove('input-error')"
+            >
+            <button 
+              type="button" 
+              class="password-toggle-btn" 
+              id="togglePasswordBtn" 
+              onclick="togglePasswordVisibility()" 
+              title="Show or hide passcode"
+              aria-label="Toggle password visibility"
+            >
+              <i class="fa-solid fa-eye" id="togglePasswordIcon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Keep Logged In Row -->
+        <div class="auth-options-row">
+          <label class="remember-checkbox-label">
+            <input type="checkbox" id="loginRemember" checked>
+            <span>Remember this device</span>
+          </label>
+          <span class="auth-team-tag">
+            <i class="fa-solid fa-users"></i> Team Code Catalyst
+          </span>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="loginSubmitBtn" class="btn-auth-submit">
+          <span><i class="fa-solid fa-arrow-right-to-bracket"></i> Secure Sign In to Platform</span>
+        </button>
+      </form>
+
+      <!-- Footer Info -->
+      <div class="auth-card-footer">
+        <div>Official Entry: <strong>Team Code Catalyst</strong> (Leader: Arnab Gayen | Co-Leader: Ujjawal Dubey)</div>
+        <div class="auth-footer-sub">Sister Nivedita University &bull; Smart India Hackathon 2026</div>
+      </div>
+    </div>
+  </div>
+
   <!-- Top MoSJE & SIH 2026 Header Bar -->
   <div class="gov-topbar">
     <div class="gov-topbar-content">
@@ -44,6 +169,10 @@
         <span class="team-badge" style="background: rgba(16, 185, 129, 0.2); border-color: #10b981; color: #34d399;" id="topLeadsBadge">
           <i class="fa-solid fa-user-gear"></i> Leader: Arnab Gayen | Co-Leader: Ujjawal Dubey
         </span>
+        <div class="auth-user-chip" id="topbarAuthChip" style="display: none;">
+          <span class="online-indicator"></span>
+          <i class="fa-solid fa-circle-check"></i> Code Catalyst Active
+        </div>
       </div>
     </div>
   </div>
@@ -154,6 +283,19 @@
         <button class="icon-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
           <i class="fa-solid fa-moon" id="themeIcon"></i>
         </button>
+
+        <!-- Authenticated User Profile & Logout -->
+        <div class="nav-auth-profile" id="navAuthProfile" style="display: none;">
+          <span class="nav-user-chip" title="Active Team Session">
+            <span class="online-indicator"></span>
+            <i class="fa-solid fa-user-shield text-emerald-400"></i>
+            <span class="hide-mobile">Code Catalyst</span>
+          </span>
+          <button class="btn-logout" onclick="handleLogout()" title="Log out of SNU BizSathi" aria-label="Sign Out">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span class="hide-mobile">Logout</span>
+          </button>
+        </div>
       </div>
     </div>
   </nav>

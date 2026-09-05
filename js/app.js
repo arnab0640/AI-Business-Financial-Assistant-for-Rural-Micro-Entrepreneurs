@@ -6,6 +6,7 @@
  * Members: Sanjana Kumari Balmiki, Sreeja Maity, Yash Raj, Vinit Buccha
  */
 
+// Global State
 let currentLang = 'en';
 let currentTheme = 'light';
 let isAudioActive = false;
@@ -13,8 +14,229 @@ let speechSynth = window.speechSynthesis;
 let marketRadarChart = null;
 let cashflowChart = null;
 
+/* ==========================================================================
+   0. Authentication & Security Engine (Team Code Catalyst)
+   ========================================================================== */
+const AUTH_CONFIG = {
+  validUserId: 'code catalyst',
+  validPassword: '1234',
+  storageKey: 'snu_bizsathi_auth_user',
+  sessionKey: 'snu_bizsathi_session'
+};
+
+function checkAuthStatus() {
+  const remembered = localStorage.getItem(AUTH_CONFIG.storageKey);
+  const sessionActive = sessionStorage.getItem(AUTH_CONFIG.sessionKey);
+  
+  if (remembered === AUTH_CONFIG.validUserId || sessionActive === AUTH_CONFIG.validUserId) {
+    applyAuthenticatedState(false);
+  } else {
+    applyUnauthenticatedState();
+  }
+}
+
+function applyAuthenticatedState(animate = true) {
+  const overlay = document.getElementById('authOverlay');
+  const body = document.body;
+  const navUser = document.getElementById('navAuthProfile');
+  const topbarUser = document.getElementById('topbarAuthChip');
+
+  body.classList.remove('auth-locked');
+  body.classList.add('auth-unlocked');
+
+  if (navUser) navUser.style.display = 'inline-flex';
+  if (topbarUser) topbarUser.style.display = 'inline-flex';
+
+  if (overlay) {
+    if (animate) {
+      overlay.classList.add('auth-fade-out');
+      setTimeout(() => {
+        overlay.style.display = 'none';
+        overlay.classList.remove('auth-fade-out');
+      }, 420);
+    } else {
+      overlay.style.display = 'none';
+    }
+  }
+}
+
+function applyUnauthenticatedState() {
+  const overlay = document.getElementById('authOverlay');
+  const body = document.body;
+  const navUser = document.getElementById('navAuthProfile');
+  const topbarUser = document.getElementById('topbarAuthChip');
+
+  body.classList.add('auth-locked');
+  body.classList.remove('auth-unlocked');
+
+  if (navUser) navUser.style.display = 'none';
+  if (topbarUser) topbarUser.style.display = 'none';
+
+  if (overlay) {
+    overlay.style.display = 'flex';
+    overlay.classList.remove('auth-fade-out');
+  }
+
+  const userIdInput = document.getElementById('loginUserId');
+  const passwordInput = document.getElementById('loginPassword');
+  const alertEl = document.getElementById('loginAlert');
+  if (userIdInput) userIdInput.value = '';
+  if (passwordInput) passwordInput.value = '';
+  if (alertEl) {
+    alertEl.style.display = 'none';
+    alertEl.className = 'login-alert';
+    alertEl.innerHTML = '';
+  }
+}
+
+function handleLogin(event) {
+  if (event) event.preventDefault();
+  
+  const userIdInput = document.getElementById('loginUserId');
+  const passwordInput = document.getElementById('loginPassword');
+  const rememberCheckbox = document.getElementById('loginRemember');
+  const alertEl = document.getElementById('loginAlert');
+  const card = document.querySelector('.auth-card');
+  const submitBtn = document.getElementById('loginSubmitBtn');
+
+  const userId = userIdInput ? userIdInput.value.trim().toLowerCase() : '';
+  const password = passwordInput ? passwordInput.value.trim() : '';
+
+  // Validate credentials: Login ID "code catalyst" & Password "1234"
+  if (userId === AUTH_CONFIG.validUserId && password === AUTH_CONFIG.validPassword) {
+    if (alertEl) {
+      alertEl.className = 'login-alert alert-success';
+      alertEl.innerHTML = '<i class="fa-solid fa-circle-check"></i> Credentials verified! Welcome Team Code Catalyst...';
+      alertEl.style.display = 'flex';
+    }
+
+    if (userIdInput) userIdInput.classList.remove('input-error');
+    if (passwordInput) passwordInput.classList.remove('input-error');
+    
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Unlocking SNU BizSathi...';
+    }
+
+    // Persist session
+    if (rememberCheckbox && rememberCheckbox.checked) {
+      localStorage.setItem(AUTH_CONFIG.storageKey, AUTH_CONFIG.validUserId);
+    } else {
+      sessionStorage.setItem(AUTH_CONFIG.sessionKey, AUTH_CONFIG.validUserId);
+    }
+
+    if (isAudioActive) {
+      speakText('Access granted. Welcome Team Code Catalyst to SNU BizSathi.');
+    }
+
+    setTimeout(() => {
+      applyAuthenticatedState(true);
+      showToast('Welcome back, Team Code Catalyst!', 'success');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span><i class="fa-solid fa-arrow-right-to-bracket"></i> Secure Sign In to Platform</span>';
+      }
+    }, 550);
+
+  } else {
+    // Failure feedback
+    if (alertEl) {
+      alertEl.className = 'login-alert alert-error';
+      if (!userId || !password) {
+        alertEl.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Please enter both Login ID and Password.';
+      } else {
+        alertEl.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Invalid Login ID or Password. Check demo credentials.';
+      }
+      alertEl.style.display = 'flex';
+    }
+
+    if (card) {
+      card.classList.remove('auth-shake');
+      void card.offsetWidth;
+      card.classList.add('auth-shake');
+    }
+
+    if (userIdInput && userId !== AUTH_CONFIG.validUserId) {
+      userIdInput.classList.add('input-error');
+      userIdInput.focus();
+    }
+    if (passwordInput && password !== AUTH_CONFIG.validPassword) {
+      passwordInput.classList.add('input-error');
+    }
+
+    if (isAudioActive) {
+      speakText('Invalid login ID or password. Please try again.');
+    }
+  }
+}
+
+function fillDemoCredentials() {
+  const userIdInput = document.getElementById('loginUserId');
+  const passwordInput = document.getElementById('loginPassword');
+  const alertEl = document.getElementById('loginAlert');
+
+  if (userIdInput) {
+    userIdInput.value = 'code catalyst';
+    userIdInput.classList.remove('input-error');
+  }
+  if (passwordInput) {
+    passwordInput.value = '1234';
+    passwordInput.classList.remove('input-error');
+  }
+  if (alertEl) {
+    alertEl.className = 'login-alert alert-info';
+    alertEl.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i> Demo credentials populated! Click <b>Sign In</b> or press Enter.';
+    alertEl.style.display = 'flex';
+  }
+  if (passwordInput) {
+    passwordInput.focus();
+  }
+}
+
+function togglePasswordVisibility() {
+  const passwordInput = document.getElementById('loginPassword');
+  const icon = document.getElementById('togglePasswordIcon');
+  if (!passwordInput || !icon) return;
+
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    icon.className = 'fa-solid fa-eye-slash';
+  } else {
+    passwordInput.type = 'password';
+    icon.className = 'fa-solid fa-eye';
+  }
+}
+
+function handleLogout() {
+  if (confirm('Are you sure you want to sign out of SNU BizSathi?')) {
+    localStorage.removeItem(AUTH_CONFIG.storageKey);
+    sessionStorage.removeItem(AUTH_CONFIG.sessionKey);
+    applyUnauthenticatedState();
+    showToast('Signed out successfully. Platform locked.', 'info');
+    if (isAudioActive) {
+      speakText('Signed out successfully.');
+    }
+  }
+}
+
+function showToast(message, type = 'info') {
+  const existing = document.querySelector('.auth-toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.className = `auth-toast toast-${type}`;
+  const icon = type === 'success' ? 'fa-circle-check' : 'fa-circle-info';
+  toast.innerHTML = `<i class="fa-solid ${icon}"></i> <span>${message}</span>`;
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    if (toast.parentNode) toast.remove();
+  }, 3000);
+}
+
 // Initialize App on DOM Load
 document.addEventListener('DOMContentLoaded', () => {
+  checkAuthStatus();
   initDropdowns();
   recalculateMarketData();
   runSchemeMatcher();
